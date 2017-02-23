@@ -1,0 +1,40 @@
+{
+  "name": "tscli",
+  "version": "0.1.0",
+  "description": "TypeScript CLI project generator",
+  "main": "./src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf ./build",
+    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
+    "predoc": "rimraf ./docs/typedoc",
+    "prebuild": "run-s format check clean",
+    "check": "tslint ./src/**/*.ts",
+    "dev": "tsc --watch",
+    "format": "tsfmt -r --baseDir ./",
+    "test": "tape ./build/test/test.utils.js|tap-summary",
+    "pretest": "run-s build"
+  },
+  "keywords": [
+    "ts",
+    "typescript",
+    "javascript",
+    "cli",
+    "starter"
+  ],
+  "author": "Rajinder Yadav <codeg33k@outlook.com> (https://github.com/rajinder-yadav)",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "husky": "^0.13.1",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.0",
+    "tap-summary": "^3.0.1",
+    "tape": "^4.6.3",
+    "tslint": "^4.4.2",
+    "typedoc": "^0.5.7",
+    "typescript": "^2.2.1",
+    "typescript-formatter": "^4.1.2"
+  }
+}
