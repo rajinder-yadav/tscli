@@ -55,7 +55,7 @@ To compile the TypeScript code, use the following command to start the build pro
 npm run build
 ```
 
-**Warning** - The `build/` folder and all sub-folder within it will be deleted to insure a clean build is performed each time. Do not place any files you will need later!
+**Warning** - The `build/` folder and all sub-folders within it will be deleted to insure a clean build is performed each time. Do not place any files you will need later!
 
 ### Library code (Modules)
 
@@ -63,7 +63,7 @@ Place any module or library source code that you write under the, `src/lib/`, su
 
 ### Formatting the code
 
-It is a good practice to format the code, so it follow a uniform structure and avoid squabbles about style. To format the TypeScript code, type:
+It is good practice to format the source code, so it conforms to a uniform structurem. Avoid squabbles about style. To format the TypeScript code, type:
 
 ```sh
 npm run format
@@ -73,23 +73,25 @@ _Note_: When the code is built and before it is committed to Git, it will be aut
 
 ### Linting
 
-The validated the TypeScript code, use the following command:
+To validate the TypeScript source code, use the following command:
 
 ```sh
 npm run check
 ```
 
-_Note_: The TypeScript code is run through the linter before a build and before it is commit into Git. Any errors encountered will be require to be fixed before the Git commit is allowed to proceed.
+_Note_: The TypeScript code is run through the linter before a build and before it is committed to the Git repository. Any errors encountered must be fixed before the Git commit is allowed to proceed.
 
 ### Testing
 
 Testing is done use _Tape_, the [test methods](http://localhost:3001/) are simple and easy to learn.
 
-_Tape_ make testing easy, code is easy to read since it is just JavaScript, Moreover less time should be put into writing test, and more time allowed for development coding. I believe _Tape_ is the best option for writing unit test for TypeScript code.
+_Tape_ makes testing simple. Code is easy to read since it is just JavaScrip, since there is no context switching to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
 
-The test should be _co-located_ with the source being tested. As a best practice, place test under a sub-folder called `test/`.
+Moreover less time should be put into writing test, and more time allowed for development coding. I believe _Tape_ is the best option for writing unit test for TypeScript code.
 
-Also pay attention to how the test source file is named: `test.<file>.ts`, so if you have a file called, `filter.ts`, the test file should be called, `test.filter.ts`.
+The test code should be _colocated_ with the source being tested. As a best practice, place test under a sub-folder called `test/`.
+
+Pay attention to how the test source file is named: `test.<file>.ts`, so if you have a file called, `filter.ts`, the test file should be named, `test.filter.ts`.
 
 To run the test, type:
 
@@ -97,7 +99,7 @@ To run the test, type:
 npm t
 ```
 
-_Note_: Running the test will cause the fresh build to be kicked off. Once the build finishes, all the unit tests will be run.
+_Note_: Running the test will cause a fresh build to be kicked-off. Once the build finishes, all the unit tests will be run.
 
 ## Static Web development
 
@@ -111,11 +113,11 @@ This will open a web browser on port 3000, and load the HTML page, `index.html` 
 
 Any changes made to `index.html` will automatically update and browser, you don not need to keep hitting _refresh_ on the browser.
 
-The website uses _Browsersync_ to run a local development web-server and keep all browsers listening to is in sync. This mean it is possible to have multiple browser listening to the server.
+The website uses _Browsersync_ to run a local development web-server and keep all browsers listening to it in sync. This means it is possible to have multiple browsers listening to the server.
 
 For how to configure the setup, read the [Browsersync options](https://browsersync.io/docs/options).
 
-Basic configuration you might be interested in are:
+Basic configurations you might be interested in are:
 
 * files
 * server
@@ -124,3 +126,10 @@ Basic configuration you might be interested in are:
 * port
 
 The default Browsersync UI web address is: `http://localhost:3001/`
+
+## Contributors Wanted
+
+I am open to help and learn from the community. Feel free to create a PR, reach out to me to discuss ideas, and help out with this project.
+
+Never done a commit before, I'm open to help first timers :)
+
