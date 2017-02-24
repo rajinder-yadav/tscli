@@ -3,4 +3,3 @@ docs/typedoc/
 node_modules/
 
 .vscode
-*.js.map
