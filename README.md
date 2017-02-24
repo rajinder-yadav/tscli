@@ -2,13 +2,13 @@
 
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
 
-Emphasis is put into encouraging the use of best practices and the best tools. I expect things to evolve overtime and settle to something the general practioner will be happy with.
+Emphasis is put into encouraging the use of best practices and the best tools. I expect things to evolve overtime and settle to something the general practitioner will be happy with.
 
 Currently the _TSCLI_ project is in a Starter kit format, which I am using to solidify concepts. and setup.
 
-## Benifits
+## Benefits
 
-Here are the benifits you will enjoy right out of the gate:
+Here are the benefits you will enjoy right out of the gate:
 
 * Quick start
 * Best Practices
@@ -21,7 +21,7 @@ Here are the benifits you will enjoy right out of the gate:
 * Code Formatting
 * Document Generation
 * Git commit hooks
-* Continious intergration (under research)
+* Continuous integration (under research)
 
 ## TypeScript development
 
