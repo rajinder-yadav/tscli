@@ -63,7 +63,7 @@ Place any module or library source code that you write under the, `src/lib/`, su
 
 ### Formatting the code
 
-It is good practice to format the source code, so it conforms to a uniform structurem. Avoid squabbles about style. To format the TypeScript code, type:
+It is good practice to format the source code, so it conforms to a uniform structure. Avoid squabbles about style. To format the TypeScript code, type:
 
 ```sh
 npm run format
@@ -85,11 +85,11 @@ _Note_: The TypeScript code is run through the linter before a build and before 
 
 Testing is done use _Tape_, the [test methods](http://localhost:3001/) are simple and easy to learn.
 
-_Tape_ makes testing simple. Code is easy to read since it is just JavaScrip, since there is no context switching to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
+_Tape_ makes testing simple. Code is easy to read since it is just JavaScript, since there is no context switching to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
 
 Moreover less time should be put into writing test, and more time allowed for development coding. I believe _Tape_ is the best option for writing unit test for TypeScript code.
 
-The test code should be _colocated_ with the source being tested. As a best practice, place test under a sub-folder called `test/`.
+The test code should be _co-located_ with the source being tested. As a best practice, place test under a sub-folder called `test/`.
 
 Pay attention to how the test source file is named: `test.<file>.ts`, so if you have a file called, `filter.ts`, the test file should be named, `test.filter.ts`.
 
