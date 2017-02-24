@@ -1,6 +1,21 @@
-const fn = name => {
-  console.log( `hello ${ name }` );
-};
+import * as bunyan from "bunyan";
 
-fn( "Rajinder" );
-console.log( "Done!" );
+const log = bunyan.createLogger( {
+  name: "main",
+  streams: [
+    {
+      level: "info",
+      path: "./logs/main.log"
+    }
+  ]
+} );
+
+const welcome = (): string => {
+  return "Welcome to TSCLI";
+}
+
+log.info( "Entering main" );
+
+console.log( welcome() );
+
+log.info( "Exiting main" );
