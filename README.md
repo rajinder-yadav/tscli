@@ -1,4 +1,4 @@
-# TSCLI - TypeScript command line project creator
+# TSCLI - TypeScript Project creator
 
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
 
@@ -131,5 +131,23 @@ The default Browsersync UI web address is: `http://localhost:3001/`
 
 I am open to help and learn from the community. Feel free to create a PR, reach out to me to discuss ideas, and help out with this project.
 
-Never done a commit before, I'm open to help first timers :)
+If you have never done a commit before, have no idea what a PR is, do not worry. I am open to help first timers :)
 
+## Where to start
+
+Not sure where to get started. Here are two suggested starting points:
+
+![Image github bar](./img/github-issues-projects-bar.png)
+
+1. Start by looking at open issues to fix.
+1. Look at Project and see what
+
+### issues
+
+If you know your way around, look for issues marked, _help wanted_.
+
+If you are someone new to helping out on a open source project, look for something really easy to get your feet wet.
+
+## Coding guideline
+
+Read the [coding guideline](https://github.com/rajinder-yadav/tscli/wiki/Coding-guideline) found in the wiki.
