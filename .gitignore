@@ -1,5 +1,8 @@
 build/
 docs/typedoc/
 node_modules/
+img/svg
 
+*.bak
+*.log
 .vscode
