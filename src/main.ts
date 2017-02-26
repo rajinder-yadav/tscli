@@ -12,7 +12,7 @@ cmd
   .usage( "<command> <project> [options...]" )
   .arguments( "<command> <project>" )
   .option( "-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}" )
-  .action(( command, project ) => {
+  .action(( command: string, project: string ) => {
     Object.assign( options, { command, project } );
   } )
   .parse( process.argv );
