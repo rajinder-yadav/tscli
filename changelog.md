@@ -2,6 +2,14 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha.3 (2017-02-26)
+
+* Fixed issues in generated app throwing an error, since the `log/` folder not created.
+
+## 0.1.2-alpha.2 (2017-02-26)
+
+* Fixed version number, displayed when typing, `cli -V`.
+
 ## 0.1.2-alpha.1 (2017-02-26)
 
 * Deleted project starter kit.
