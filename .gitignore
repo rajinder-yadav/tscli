@@ -1,7 +1,12 @@
 build/
+log/
 docs/typedoc/
 node_modules/
 img/svg
+.templates/angular
+.templates/node
+.templates/npm
+.templates/web
 
 *.bak
 *.log
