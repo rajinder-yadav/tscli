@@ -6,6 +6,14 @@ Emphasis is put into encouraging the use of best practices and the best tools. I
 
 Currently the _TSCLI_ project is in a Starter kit format, which I am using to solidify concepts. and setup.
 
+Start playing with the project starter template now:
+
+```sh
+npm install
+```
+
+_Note_: If you are using _Yarn_ over _NPM_, continue to work with _Yarn_.
+
 ## Benefits
 
 Here are the benefits you will enjoy right out of the gate:
@@ -96,7 +104,7 @@ Pay attention to how the test source file is named: `test.<file>.ts`, so if you 
 To run the test, type:
 
 ```sh
-npm t
+npm test
 ```
 
 _Note_: Running the test will cause a fresh build to be kicked-off. Once the build finishes, all the unit tests will be run.
