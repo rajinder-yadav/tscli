@@ -7,7 +7,7 @@ const path = require("path");
 const YARN = sh.which("yarn");
 let options = {};
 cmd
-    .version("0.1.2-alpha.2")
+    .version("0.1.2-alpha.3")
     .usage("<command> <project> [options...]")
     .arguments("<command> <project>")
     .option("-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}")
@@ -28,6 +28,7 @@ function createNewProject(cmd, options) {
         console.log("default project...");
         sh.cp("-r", path.resolve(__dirname, "../.templates/default/"), `${options.project}`);
         sh.pushd(`${options.project}`);
+        sh.mkdir("-p", "./docs", "./logs");
         sh.exec("git init");
         if (YARN) {
             sh.exec("yarn");
