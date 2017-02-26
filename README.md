@@ -4,13 +4,25 @@ The _TSCLI_ project is in the process of becoming a general purpose CLI project 
 
 Emphasis is put into encouraging the use of best practices and the best tools. I expect things to evolve overtime and settle to something the general practitioner will be happy with.
 
-Currently the _TSCLI_ project is in a Starter kit format, which I am using to solidify concepts. and setup.
+Currently the _TSCLI_ default project template is being used to solidify concepts and setup.
 
-Start playing with the project starter template now:
+## Installing TSCLI
 
 ```sh
-npm install
+npm install -g tscli
 ```
+
+## Creating a Project
+
+Start playing with the demo starter project now, the source code is under the project `src/` sub-folder.
+
+```sh
+cli new demo
+cd demo
+npm start
+```
+
+This will perform a clean build and run the demo program. A log will be produced in the `logs/` sub-folder under the project root.
 
 _Note_: If you are using _Yarn_ over _NPM_, continue to work with _Yarn_.
 
@@ -59,7 +71,7 @@ See [compiler options](https://www.typescriptlang.org/docs/handbook/compiler-opt
 
 To compile the TypeScript code, use the following command to start the build process:
 
-```
+```sh
 npm run build
 ```
 
