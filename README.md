@@ -140,9 +140,9 @@ Not sure where to get started. Here are two suggested starting points:
 ![Image github bar](./img/github-issues-projects-bar.png)
 
 1. Start by looking at open issues to fix.
-1. Look at Project and see what
+1. Look at _Projects_ and see what can pick up.
 
-### issues
+### Issues
 
 If you know your way around, look for issues marked, _help wanted_.
 
