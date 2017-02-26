@@ -1,21 +1,4 @@
-import * as bunyan from "bunyan";
+#! /usr/bin/env node
+import * as sh from "shelljs";
 
-const log = bunyan.createLogger( {
-  name: "main",
-  streams: [
-    {
-      level: "info",
-      path: "./logs/main.log"
-    }
-  ]
-} );
-
-const welcome = (): string => {
-  return "Welcome to TSCLI";
-}
-
-log.info( "Entering main" );
-
-console.log( welcome() );
-
-log.info( "Exiting main" );
+sh.exec( "echo The TSCLI is working!!!" );
