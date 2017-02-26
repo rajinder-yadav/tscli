@@ -7,7 +7,7 @@ const path = require("path");
 const YARN = sh.which("yarn");
 let options = {};
 cmd
-    .version("0.1.2")
+    .version("0.1.2-alpha.1")
     .usage("<command> <project> [options...]")
     .arguments("<command> <project>")
     .option("-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}")
