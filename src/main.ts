@@ -8,7 +8,7 @@ const YARN = sh.which( "yarn" );
 let options: any = {};
 
 cmd
-  .version( "0.1.2-alpha.1" )
+  .version( "0.1.2-alpha.2" )
   .usage( "<command> <project> [options...]" )
   .arguments( "<command> <project>" )
   .option( "-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}" )
