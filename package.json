@@ -3,22 +3,26 @@
   "version": "0.1.1",
   "description": "TypeScript CLI project generator",
   "main": "./src/main.ts",
+  "bin": {
+    "cli": "bin/main.js"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rimraf ./build",
+    "copy": "shx cp ./build/main.js ./bin/",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
     "check": "tslint ./src/**/*.ts",
     "dev": "tsc --watch",
     "format": "tsfmt -r --baseDir ./",
+    "link": "npm link",
     "node:debug": "node --inspect --debug-brk ./build/main.js",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
     "predoc": "rimraf ./docs/typedoc",
     "prepush": "run-s test",
     "pretest": "run-s build",
-    "test": "tape ./build/lib/test/test.utils.js|tap-summary",
-    "test:web": "browserify ./build/lib/test/test.utils.js|tape-run|tap-summary",
-    "web": "browser-sync start --config bs-config.js"
+    "postbuild": "run-s copy link",
+    "test": "tape ./build/lib/test/test.utils.js|tap-summary"
   },
   "keywords": [
     "ts",
@@ -41,6 +45,7 @@
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.0",
+    "shx": "^0.2.2",
     "tachyons": "^4.6.2",
     "tap-summary": "^3.0.1",
     "tape": "^4.6.3",
@@ -51,6 +56,8 @@
     "typescript-formatter": "^4.1.2"
   },
   "dependencies": {
-    "bunyan": "^1.8.5"
+    "bunyan": "^1.8.5",
+    "commander": "^2.9.0",
+    "shelljs": "^0.7.6"
   }
 }
