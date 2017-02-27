@@ -1,29 +1,30 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
-    "sourceMap": true,
-    "outDir": "./bin",
-    "noEmitOnError": true,
-    "noImplicitAny": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
     "declaration": true,
     "declarationDir": "./bin",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "newLine": "LF"
+    "module": "commonjs",
+    "newLine": "LF",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./bin",
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es6"
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "test/**/*",
     "bin/**/*",
     "build/**/*",
     "dist/**/*",
     "docs/**/*",
     "log/*",
-    "node_modules/**/*"
+    "node_modules/**/*",
+    "test/**/*"
   ]
 }
