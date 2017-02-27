@@ -19,7 +19,7 @@
     "precommit": "run-s format check",
     "predoc": "shx rm -rf ./docs/typedoc && shx mkdir -p ./docs/typedoc",
     "prepush": "run-s test",
-    "pretest": "run-s bin",
+    "pretest": "run-s build",
     "postbuild": "run-s link",
     "test": "tape ./bin/lib/test/test.utils.js|tap-summary"
   },
