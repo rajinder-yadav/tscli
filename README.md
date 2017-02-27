@@ -1,3 +1,7 @@
+![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
+![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.3-blue.svg)
+![License](https://img.shields.io/badge/TSCLI-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
