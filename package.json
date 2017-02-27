@@ -8,21 +8,20 @@
   },
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf ./build",
-    "copy": "shx cp ./build/main.js ./bin/",
+    "clean": "shx rm -rf ./bin && shx rm -rf ./build",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
     "check": "tslint ./src/**/*.ts",
     "dev": "tsc --watch",
     "format": "tsfmt -r --baseDir ./",
     "link": "npm link",
-    "node:debug": "node --inspect --debug-brk ./build/main.js",
+    "node:debug": "node --inspect --debug-brk ./bin/main.js",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
-    "predoc": "rimraf ./docs/typedoc",
+    "predoc": "shx rm -rf ./docs/typedoc && shx mkdir -p ./docs/typedoc",
     "prepush": "run-s test",
-    "pretest": "run-s build",
-    "postbuild": "run-s copy link",
-    "test": "tape ./build/lib/test/test.utils.js|tap-summary"
+    "pretest": "run-s bin",
+    "postbuild": "run-s link",
+    "test": "tape ./bin/lib/test/test.utils.js|tap-summary"
   },
   "keywords": [
     "ts",
@@ -31,7 +30,7 @@
     "cli",
     "starter"
   ],
-  "author": "Rajinder Yadav <codeg33k@outlook.com> (https://github.com/rajinder-yadav)",
+  "author": "Rajinder Yadav <devguy.ca@gmail.com> (https://github.com/rajinder-yadav)",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
@@ -46,7 +45,6 @@
     "husky": "^0.13.1",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.0",
     "shx": "^0.2.2",
     "tachyons": "^4.6.2",
     "tap-summary": "^3.0.1",
