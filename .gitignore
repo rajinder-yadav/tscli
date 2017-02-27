@@ -1,8 +1,12 @@
 build/
-log/
+dist/
 docs/typedoc/
+img/svg/
+log/
 node_modules/
-img/svg
+tmp/
+typings/
+
 .templates/angular
 .templates/node
 .templates/npm
