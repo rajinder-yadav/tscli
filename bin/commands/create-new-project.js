@@ -13,7 +13,7 @@ _________ _______  _______  _       _________
    | |   /\\____) || (____/\\| (____/\\___) (___
    )_(   \\_______)(_______/(_______/\\_______/
 
-This Project was generated using TSCLI.
+This Project was generated using TSCLI (${data_types_1.VERSION}).
 Initial Commit.
 `;
 function createNewProject(cmd, options) {

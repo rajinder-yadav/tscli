@@ -1,7 +1,7 @@
 import * as sh from "shelljs";
 import * as path from "path";
 
-import { YARN } from "../data-types/data-types";
+import { VERSION, YARN } from "../data-types/data-types";
 
 const commit_message: string = `
 _________ _______  _______  _       _________
@@ -13,7 +13,7 @@ _________ _______  _______  _       _________
    | |   /\\____) || (____/\\| (____/\\___) (___
    )_(   \\_______)(_______/(_______/\\_______/
 
-This Project was generated using TSCLI.
+This Project was generated using TSCLI (${ VERSION }).
 Initial Commit.
 `;
 
