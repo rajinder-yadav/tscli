@@ -3,6 +3,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sh = require("shelljs");
 const path = require("path");
 const data_types_1 = require("../data-types/data-types");
+const commit_message = `
+_________ _______  _______  _       _________
+\\__   __/(  ____ \\(  ____ \\( \\      \\__   __/
+   ) (   | (    \\/| (    \\/| (         ) (
+   | |   | (_____ | |      | |         | |
+   | |   (_____  )| |      | |         | |
+   | |         ) || |      | |         | |
+   | |   /\\____) || (____/\\| (____/\\___) (___
+   )_(   \\_______)(_______/(_______/\\_______/
+
+This Project was generated using TSCLI.
+Initial Commit.
+`;
 function createNewProject(cmd, options) {
     console.log("TSCLI is generating a new ");
     if (typeof cmd.type === "undefined") {
@@ -11,6 +24,8 @@ function createNewProject(cmd, options) {
         sh.pushd(`${options.project}`);
         sh.mkdir("-p", "./docs", "./logs");
         sh.exec("git init");
+        sh.exec("git add -A");
+        sh.exec(`git commit -m "${commit_message}"`);
         if (data_types_1.YARN) {
             sh.exec("yarn");
         }

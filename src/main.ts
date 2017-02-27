@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 import * as cmd from "commander";
+import { VERSION } from "./data-types/data-types";
 
 import { createNewProject } from "./commands/create-new-project";
 
 let options: any = {};
 
 cmd
-  .version( "0.1.2-alpha.3" )
+  .version( `${ VERSION }` )
   .usage( "<command> <project> [options...]" )
   .arguments( "<command> <project>" )
   .option( "-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}" )

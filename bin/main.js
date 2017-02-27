@@ -2,10 +2,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const cmd = require("commander");
+const data_types_1 = require("./data-types/data-types");
 const create_new_project_1 = require("./commands/create-new-project");
 let options = {};
 cmd
-    .version("0.1.2-alpha.3")
+    .version(`${data_types_1.VERSION}`)
     .usage("<command> <project> [options...]")
     .arguments("<command> <project>")
     .option("-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}")
