@@ -2,21 +2,24 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
-    "sourceMap": false,
-    "outDir": "./build",
+    "sourceMap": true,
+    "outDir": "./bin",
     "noEmitOnError": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "declaration": true,
-    "declarationDir": "./build",
+    "declarationDir": "./bin",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "newLine": "LF"
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
+    "test/**/*",
+    "bin/**/*",
     "build/**/*",
     "dist/**/*",
     "docs/**/*",
