@@ -5,29 +5,29 @@
   "main": "./src/main.ts",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf ./build",
-    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
-    "check": "tslint ./src/**/*.ts",
+    "check": "tslint -t codeFrame \"./src/**/*.ts\"",
+    "clean": "shx rm -rf ./build",
     "dev": "tsc --watch",
+    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk ./build/main.js",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
-    "predoc": "rimraf ./docs/typedoc",
+    "predoc": "shx rm -rf ./docs/typedoc && shx mkdir -p ./docs/typedoc",
     "prepush": "run-s test",
-    "pretest": "run-s build",
     "prestart": "run-s build",
+    "pretest": "run-s build",
     "start": "node ./build/main.js",
     "test": "tape ./build/lib/test/test.utils.js|tap-summary",
     "test:web": "browserify ./build/lib/test/test.utils.js|tape-run|tap-summary",
     "web": "browser-sync start --config bs-config.js"
   },
   "keywords": [
-    "ts",
-    "typescript",
-    "javascript",
     "cli",
-    "starter"
+    "javascript",
+    "starter",
+    "ts",
+    "typescript"
   ],
   "author": "[Full name] <email-inside-brackets> (project-github-repo-inside bracker)",
   "license": "GPL-3.0",
@@ -37,12 +37,13 @@
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
+    "@types/tape": "^4.2.29",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "husky": "^0.13.1",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.0",
+    "shx": "^0.2.2",
     "tachyons": "^4.6.2",
     "tap-summary": "^3.0.1",
     "tape": "^4.6.3",
@@ -50,7 +51,7 @@
     "tslint": "^4.4.2",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
-    "typescript-formatter": "^4.1.2"
+    "typescript-formatter": "^5.0.0"
   },
   "dependencies": {
     "bunyan": "^1.8.5"
