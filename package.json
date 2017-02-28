@@ -50,10 +50,10 @@
     "tap-summary": "^3.0.1",
     "tape": "^4.6.3",
     "tape-run": "^2.2.1",
-    "tslint": "^4.4.2",
+    "tslint": "^4.5.0",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
-    "typescript-formatter": "^4.1.2"
+    "typescript-formatter": "^5.0.0"
   },
   "dependencies": {
     "bunyan": "^1.8.5",
