@@ -163,10 +163,8 @@ If you have never done a commit before, have no idea what a PR is, do not worry.
 
 Not sure where to get started. Here are two suggested starting points:
 
-![Image Github menubar](./img/github-issues-projects-bar.png)
-
 1. Start by looking at open issues to fix.
-1. Look at _Projects_ and see what can pick up (I've switched to using [Taigo](https://tree.taiga.io/project/rajinder-yadav-launchpad/kanban?kanban-status=1068326).
+1. Look at [Launchpad](https://tree.taiga.io/project/rajinder-yadav-launchpad/kanban?kanban-status=1068326) project tasks for things to help out with.
 
 ### Issues
 
