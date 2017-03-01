@@ -7,12 +7,13 @@
     "build": "tsc",
     "check": "tslint -t codeFrame \"./src/**/*.ts\"",
     "clean": "shx rm -rf ./build",
-    "dev": "tsc --watch",
+    "dev": "node ./build/main.js",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk ./build/main.js",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
+    "predev": "run-s clean tsc",
     "predoc": "shx rm -rf ./docs/typedoc && shx mkdir -p ./docs/typedoc",
     "prepush": "run-s test",
     "prestart": "run-s build",
@@ -20,6 +21,7 @@
     "start": "node ./build/main.js",
     "test": "tape ./build/lib/test/test.utils.js|tap-summary",
     "test:web": "browserify ./build/lib/test/test.utils.js|tape-run|tap-summary",
+    "tsc": "tsc",
     "web": "browser-sync start --config bs-config.js"
   },
   "keywords": [
