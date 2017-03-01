@@ -8,6 +8,7 @@
     "check": "tslint -t codeFrame \"./src/**/*.ts\"",
     "clean": "shx rm -rf ./build",
     "dev": "node ./build/main.js",
+
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk ./build/main.js",
