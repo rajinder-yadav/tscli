@@ -12,7 +12,7 @@ const log = bunyan.createLogger( {
 
 const welcome = (): string => {
   return "Welcome to TSCLI - Demo program is working!";
-}
+};
 
 log.info( "Entering main" );
 

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "check": "tslint -t codeFrame ./src/*.ts",
+    "check": "tslint -t codeFrame \"./src/**/*.ts\"",
     "clean": "shx rm -rf ./bin && shx rm -rf ./build",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
     "format": "tsfmt -r --baseDir ./",
