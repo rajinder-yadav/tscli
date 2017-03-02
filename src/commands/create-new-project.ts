@@ -27,7 +27,7 @@ export function createNewProject( cmd: any, options: any ): void {
     sh.mkdir( "-p", "./docs", "./logs" );
     sh.exec( "git init" );
     sh.exec( "git add -A" );
-    sh.exec( `git commit -m "${ commit_message }"` );
+    sh.exec( `git commit -q -m "${ commit_message }"` );
     sh.exec( "git checkout -b dev" );
     if ( YARN ) {
       sh.exec( "yarn" );
