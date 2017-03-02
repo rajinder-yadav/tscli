@@ -26,6 +26,7 @@ function createNewProject(cmd, options) {
         sh.exec("git init");
         sh.exec("git add -A");
         sh.exec(`git commit -m "${commit_message}"`);
+        sh.exec("git checkout -b dev");
         if (data_types_1.YARN) {
             sh.exec("yarn");
         }
