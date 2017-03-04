@@ -20,7 +20,7 @@ module.exports = {
         }
     },
     "files": [
-      "src/index.html"
+      "build/index.html"
     ],
     "watchEvents": [
         "change"
@@ -29,7 +29,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": {
-      baseDir: "src",
+      baseDir: "build",
       routes: {
         "/node_modules/tachyons/css":"node_modules/tachyons/css"
       }
