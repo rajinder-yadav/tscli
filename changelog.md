@@ -18,6 +18,9 @@ All changes to this project will be recorded in this document.
 ```
 
 * Fixed NPM scripts to correctly use Node's recurse folder syntax.
+* Fixed Web script, now servers from build folders and copies over file, `index.html`.
+* Fixed missing `<head>` tag in file, `index.html`.
+* Updated README with sub-sction on Browsersync, setting up asset serving.
 
 ## 0.1.2-alpha.3 (2017-02-26)
 
