@@ -22,11 +22,13 @@
     "prepush": "run-s test",
     "prestart": "run-s build",
     "pretest": "run-s build",
+    "preweb": "run-s build webinit",
     "start": "node $npm_package_config_main",
     "test": "tape \"build/**/*/test.*.js\"|tap-summary",
     "test:web": "browserify \"build/**/*/test.*.js\"|tape-run|tap-summary",
     "tsc": "tsc",
-    "web": "browser-sync start --config bs-config.js"
+    "web": "browser-sync start --config bs-config.js",
+    "webinit": "shx cp src/index.html build"
   },
   "keywords": [
     "javascript",
