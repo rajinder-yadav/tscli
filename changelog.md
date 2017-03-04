@@ -2,6 +2,23 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-4 (2017)
+
+* Cleaned up NPM scripts.
+* Silenced inital generated commit.
+
+* Doc output folder is a config setting, `doc_folder`.
+* The entry file for `npm start` is a config setting, `main`.
+
+```js
+  "config": {
+    "main": "build/main.js",
+    "doc_folder": "docs/typedoc"
+  },
+```
+
+* Fixed NPM scripts to correctly use Node's recurse folder syntax.
+
 ## 0.1.2-alpha.3 (2017-02-26)
 
 * Fixed issues in generated app throwing an error, since the `log/` folder not created.

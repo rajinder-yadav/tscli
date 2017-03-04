@@ -2,31 +2,36 @@
   "name": "tscli",
   "version": "0.1.2-alpha.4",
   "description": "TypeScript CLI project generator",
-  "main": "./src/main.ts",
+  "main": "src/main.ts",
   "bin": {
     "cli": "bin/main.js"
   },
+  "config": {
+    "doc_folder": "docs/typedoc"
+  },
   "scripts": {
-    "build": "tsc",
-    "check": "tslint -t codeFrame \"./src/**/*.ts\"",
-    "clean": "shx rm -rf ./bin && shx rm -rf ./build",
-    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
+    "build": "cross-env NODE_ENV=prod tsc",
+    "check": "tslint -t codeFrame \"src/**/*.ts\"",
+    "clean": "shx rm -rf bin && shx rm -rf build",
+    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "link": "npm link",
-    "node:debug": "node --inspect --debug-brk ./bin/main.js",
+    "node:debug": "node --inspect --debug-brk $npm_package_bin_cli",
     "postbuild": "run-s link",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
-    "predoc": "shx rm -rf ./docs/typedoc && shx mkdir -p ./docs/typedoc",
+    "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
     "pretest": "run-s build",
-    "test": "tape ./bin/lib/test/test.utils.js|tap-summary"
+    "test": "tape \"bin/**/*/test.*.js\"|tap-summary"
   },
   "keywords": [
-    "cli",
     "javascript",
+    "js",
+    "project-creator",
     "starter",
     "ts",
+    "tscli",
     "typescript"
   ],
   "author": "Rajinder Yadav <devguy.ca@gmail.com> (https://github.com/rajinder-yadav)",
@@ -39,6 +44,8 @@
     "@types/commander": "^2.3.31",
     "@types/node": "^7.0.5",
     "@types/tape": "^4.2.29",
+    "cross-env": "^3.1.4",
+    "cross-var": "^1.0.3",
     "husky": "^0.13.1",
     "npm-run-all": "^4.0.2",
     "shx": "^0.2.2",
