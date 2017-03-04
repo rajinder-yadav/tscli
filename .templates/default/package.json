@@ -41,13 +41,15 @@
     "url": "https://github.com/<github-user-id>/<project-name>"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.35",
     "@types/node": "^7.0.5",
     "@types/tape": "^4.2.29",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
+    "core-js": "^2.4.1",
     "cross-env": "^3.1.4",
     "cross-var": "^1.0.3",
-    "husky": "^0.13.1",
+    "husky": "^0.13.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
     "shx": "^0.2.2",
@@ -58,9 +60,9 @@
     "tslint": "^4.4.2",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
-    "typescript-formatter": "^5.0.0"
+    "typescript-formatter": "^5.1.0"
   },
   "dependencies": {
-    "bunyan": "^1.8.5"
+    "bunyan": "^1.8.8"
   }
 }
