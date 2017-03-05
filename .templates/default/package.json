@@ -15,9 +15,10 @@
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
+    "postweb": "watch-run -p '/tmp/test-build/src/**' npm run web",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
-    "predev": "cross-env NODE_ENV=dev run-s clean tsc",
+    "predev": "cross-env NODE_ENV=dev run-s clean tsc -- -w",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
     "prestart": "run-s build",
@@ -27,8 +28,11 @@
     "test": "tape \"build/**/*/test.*.js\"|tap-summary",
     "test:web": "browserify \"build/**/*/test.*.js\"|tape-run|tap-summary",
     "tsc": "tsc",
-    "web": "browser-sync start --config bs-config.js",
-    "webinit": "shx cp src/index.html build"
+    "web": "run-p webwatch webbrowser",
+    "webbrowser": "browser-sync start --config bs-config.js",
+    "webinit": "shx cp src/index.html build",
+    "webrefresh": "browser-sync reload",
+    "webwatch": "gazeall --run \"run-s clean build webinit webrefresh\" \"src/**/*\""
   },
   "keywords": [
     "javascript",
@@ -51,6 +55,7 @@
     "core-js": "^2.4.1",
     "cross-env": "^3.1.4",
     "cross-var": "^1.0.3",
+    "gazeall": "^0.1.0",
     "husky": "^0.13.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
