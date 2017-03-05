@@ -1,7 +1,7 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
 ![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.4-blue.svg)
-![License](https://img.shields.io/badge/TSCLI-GPL--3.0-blue.svg)
+![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
@@ -153,6 +153,28 @@ Basic configurations setting you may be interested in are:
 
 The default Browsersync UI web address is: `http://localhost:3001/`.
 
+### Browsersync Asset fetching
+
+With Browsersync, having to serve addition CSS and JavaScript files, make sure to add their path in routes. Something similar to like this:
+
+```js
+    "server": {
+      baseDir: "src",
+      routes: {
+        "/node_modules/tachyons/css":"node_modules/tachyons/css"
+      }
+```
+
+This will allow including `<script>` assets from the index.html file like this:
+
+```html
+<head>
+  <link rel="stylesheet" href="./node_modules/tachyons/css/tachyons.min.css">
+  <script src="../node_modules/zone.js/dist/zone.js"></script>
+  <script src="../node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
+</head>
+```
+
 ## Contributors Wanted
 
 I am open to help and learn from the community. Feel free to create a PR, reach out to me to discuss ideas, and help out with this project.
@@ -166,7 +188,6 @@ Not sure where to get started. Here are two suggested starting points:
 1. Start by looking at open issues to fix.
 1. Look at [Launchpad](https://tree.taiga.io/project/rajinder-yadav-launchpad/kanban?kanban-status=1068326) project tasks for things to help out with.
 
-
 ### Issues
 
 If you know your way around, look for issues marked, _help wanted_.
@@ -176,4 +197,3 @@ If you are someone new to helping out on a Open Source project, look for somethi
 ## Coding guideline
 
 Read the [coding guideline](https://github.com/rajinder-yadav/tscli/wiki/Coding-guideline) found in the wiki.
-

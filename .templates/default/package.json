@@ -2,33 +2,41 @@
   "name": "@tscli/demo",
   "version": "0.1.0",
   "description": "TypeScript CLI generated demo project",
-  "main": "./src/main.ts",
+  "main": "src/main.ts",
+  "config": {
+    "main": "build/main.js",
+    "doc_folder": "docs/typedoc"
+  },
   "scripts": {
-    "build": "tsc",
-    "check": "tslint -t codeFrame \"./src/**/*.ts\"",
-    "clean": "shx rm -rf ./build",
-    "dev": "node ./build/main.js",
-
-    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out ./docs/typedoc/ ./src",
+    "build": "cross-env NODE_ENV=prod tsc",
+    "check": "tslint -t codeFrame \"src/**/*.ts\"",
+    "clean": "shx rm -rf build",
+    "dev": "node $npm_package_config_main",
+    "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
-    "node:debug": "node --inspect --debug-brk ./build/main.js",
+    "node:debug": "node --inspect --debug-brk $npm_package_config_main",
+    "postweb": "watch-run -p '/tmp/test-build/src/**' npm run web",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
-    "predev": "run-s clean tsc",
-    "predoc": "shx rm -rf ./docs/typedoc && shx mkdir -p ./docs/typedoc",
+    "predev": "cross-env NODE_ENV=dev run-s clean tsc -- -w",
+    "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
     "prestart": "run-s build",
     "pretest": "run-s build",
-    "start": "node ./build/main.js",
-    "test": "tape ./build/lib/test/test.utils.js|tap-summary",
-    "test:web": "browserify ./build/lib/test/test.utils.js|tape-run|tap-summary",
+    "preweb": "run-s build webinit",
+    "start": "node $npm_package_config_main",
+    "test": "tape \"build/**/*/test.*.js\"|tap-summary",
+    "test:web": "browserify \"build/**/*/test.*.js\"|tape-run|tap-summary",
     "tsc": "tsc",
-    "web": "browser-sync start --config bs-config.js"
+    "web": "run-p webwatch webbrowser",
+    "webbrowser": "browser-sync start --config bs-config.js",
+    "webinit": "shx cp src/index.html build",
+    "webrefresh": "browser-sync reload",
+    "webwatch": "gazeall --run \"run-s clean build webinit webrefresh\" \"src/**/*\""
   },
   "keywords": [
-    "cli",
     "javascript",
-    "starter",
+    "js",
     "ts",
     "typescript"
   ],
@@ -39,11 +47,16 @@
     "url": "https://github.com/<github-user-id>/<project-name>"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.35",
     "@types/node": "^7.0.5",
     "@types/tape": "^4.2.29",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
-    "husky": "^0.13.1",
+    "core-js": "^2.4.1",
+    "cross-env": "^3.1.4",
+    "cross-var": "^1.0.3",
+    "gazeall": "^0.1.0",
+    "husky": "^0.13.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
     "shx": "^0.2.2",
@@ -54,9 +67,9 @@
     "tslint": "^4.4.2",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
-    "typescript-formatter": "^5.0.0"
+    "typescript-formatter": "^5.1.0"
   },
   "dependencies": {
-    "bunyan": "^1.8.5"
+    "bunyan": "^1.8.8"
   }
 }
