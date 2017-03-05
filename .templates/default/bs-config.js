@@ -20,7 +20,7 @@ module.exports = {
         }
     },
     "files": [
-      "build/index.html"
+      "src/**/*"
     ],
     "watchEvents": [
         "change"
