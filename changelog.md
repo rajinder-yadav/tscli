@@ -2,7 +2,7 @@
 
 All changes to this project will be recorded in this document.
 
-## 0.1.2-alpha-6 (2017-03-12)
+## 0.1.2-alpha-7 (2017-03-12)
 
 * Cleaned project .gitignore files
 * Added support for JavaScript NodeJS project creation
