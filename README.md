@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 
-<img src="img/tscli.svg" width="200">
+<img src="./img/tscli.svg" width="200">
 
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
 
