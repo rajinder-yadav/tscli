@@ -11,14 +11,13 @@
     "build": "cross-env NODE_ENV=prod tsc",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
     "clean": "shx rm -rf build",
-    "dev": "node $npm_package_config_main",
+    "dev": "cross-env NODE_ENV=dev run-s clean tsc:watch",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
-    "postweb": "watch-run -p '/tmp/test-build/src/**' npm run web",
+    "postweb": "watch-run -p \"/tmp/test-build/src/**\" npm run web",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
-    "predev": "cross-env NODE_ENV=dev run-s clean tsc -- -w",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
     "prestart": "run-s build",
@@ -28,6 +27,7 @@
     "test": "tape \"build/**/*/test.*.js\"|tap-summary",
     "test:web": "browserify \"build/**/*/test.*.js\"|tape-run|tap-summary",
     "tsc": "tsc",
+    "tsc:watch": "tsc -w",
     "web": "run-p webwatch webbrowser",
     "webbrowser": "browser-sync start --config bs-config.js",
     "webinit": "shx cp src/index.html build",
@@ -47,15 +47,15 @@
     "url": "https://github.com/<github-user-id>/<project-name>"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.35",
-    "@types/node": "^7.0.5",
+    "@types/core-js": "^0.9.37",
+    "@types/node": "^7.0.8",
     "@types/tape": "^4.2.29",
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "core-js": "^2.4.1",
     "cross-env": "^3.1.4",
     "cross-var": "^1.0.3",
-    "gazeall": "^0.1.0",
+    "gazeall": "^0.1.6",
     "husky": "^0.13.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
@@ -67,7 +67,7 @@
     "tslint": "^4.4.2",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
-    "typescript-formatter": "^5.1.0"
+    "typescript-formatter": "^5.1.1"
   },
   "dependencies": {
     "bunyan": "^1.8.8"

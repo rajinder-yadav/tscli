@@ -21,6 +21,7 @@ All changes to this project will be recorded in this document.
 * Fixed Web script, now servers from build folders and copies over file, `index.html`.
 * Fixed missing `<head>` tag in file, `index.html`.
 * Updated README with sub-sction on Browsersync, setting up asset serving.
+* Update NPM package modules.
 
 ## 0.1.2-alpha.3 (2017-02-26)
 
