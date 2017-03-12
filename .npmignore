@@ -1,0 +1,11 @@
+*.ts
+
+src/
+docs/
+img/
+test/
+
+tsconfig.json
+tsfmt.json
+tslint.json
+.travis.yml
