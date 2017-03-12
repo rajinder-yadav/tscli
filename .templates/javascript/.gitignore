@@ -1,0 +1,15 @@
+
+build/
+dist/
+docs/jsdoc/
+log/
+node_modules/
+tmp/
+typings/
+
+*.bak
+*.log
+npm-debug.log*
+yarn-error.log*
+
+.vscode
