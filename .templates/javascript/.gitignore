@@ -1,7 +1,7 @@
 
 build/
 dist/
-docs/typedoc/
+docs/jsdoc/
 log/
 node_modules/
 tmp/
@@ -13,4 +13,3 @@ npm-debug.log*
 yarn-error.log*
 
 .vscode
-
