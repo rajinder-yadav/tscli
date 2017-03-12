@@ -4,6 +4,7 @@ const sh = require("shelljs");
 const path = require("path");
 const data_types_1 = require("../data-types/data-types");
 const commit_message = `
+This Project was generated using TSCLI (${data_types_1.VERSION}).
 _________ _______  _______  _       _________
 \\__   __/(  ____ \\(  ____ \\( \\      \\__   __/
    ) (   | (    \\/| (    \\/| (         ) (
@@ -13,7 +14,6 @@ _________ _______  _______  _       _________
    | |   /\\____) || (____/\\| (____/\\___) (___
    )_(   \\_______)(_______/(_______/\\_______/
 
-This Project was generated using TSCLI (${data_types_1.VERSION}).
 Initial Commit.
 `;
 function createNewProject(cmd, options) {
@@ -22,7 +22,7 @@ function createNewProject(cmd, options) {
         console.log("default project...");
         sh.cp("-r", path.resolve(__dirname, "../../.templates/default/"), `${options.project}`);
         sh.pushd(`${options.project}`);
-        sh.mkdir("-p", "./docs", "./logs");
+        sh.mkdir("./docs", "./logs");
         sh.exec("git init");
         sh.exec("git add -A");
         sh.exec(`git commit -q -m "${commit_message}"`);
