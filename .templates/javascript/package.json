@@ -1,0 +1,53 @@
+{
+  "name": "@tscli/demo",
+  "version": "0.1.0",
+  "description": "TypeScript CLI generated demo project",
+  "main": "src/main.ts",
+  "config": {
+    "main": "src/main.js",
+    "doc_folder": "docs/jsdoc"
+  },
+  "scripts": {
+    "check": "eslint \"src/**/*.js\"",
+    "dev": "gazeall --run \"node src/main.js\" \"src/**/*\"",
+    "doc": "jsdocs src $npm_package_config_doc_folder",
+    "format": "prettier --write \"src/**/*.js\"",
+    "node:debug": "node --inspect --debug-brk $npm_package_config_main",
+    "precommit": "run-s format check",
+    "predev": "node src/main.js",
+    "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
+    "prepush": "run-s test",
+    "start": "node $npm_package_config_main",
+    "test": "tape \"src/**/*/test.*.js\"|tap-summary"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "node"
+  ],
+  "author": "[Full name] <email-inside-brackets> (project-github-repo-inside bracker)",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<github-user-id>/<project-name>"
+  },
+  "devDependencies": {
+    "core-js": "^2.4.1",
+    "cross-env": "^3.1.4",
+    "cross-var": "^1.0.3",
+    "eslint": "^3.17.1",
+    "gazeall": "^0.1.6",
+    "husky": "^0.13.2",
+    "jsdocs": "^0.1.0",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^0.22.0",
+    "shx": "^0.2.2",
+    "tachyons": "^4.6.2",
+    "tap-summary": "^3.0.1",
+    "tape": "^4.6.3",
+    "tape-run": "^2.2.1"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.8"
+  }
+}

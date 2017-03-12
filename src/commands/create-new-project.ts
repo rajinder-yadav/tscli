@@ -18,24 +18,26 @@ Initial Commit.
 `;
 
 export function createNewProject( cmd: any, options: any ): void {
-  console.log( "TSCLI is generating a new " );
-
-  if ( typeof cmd.type === "undefined" ) {
-    console.log( "default project..." );
+  if ( typeof cmd.type === "undefined" || cmd.type === "default" ) {
+    console.log( "TSCLI is generating a new default project..." );
     sh.cp( "-r", path.resolve( __dirname, "../../.templates/default/" ), `${ options.project }` );
-    sh.pushd( `${ options.project }` );
-    sh.mkdir( "./docs", "./logs" );
-    sh.exec( "git init" );
-    sh.exec( "git add -A" );
-    sh.exec( `git commit -q -m "${ commit_message }"` );
-    sh.exec( "git checkout -b dev" );
-    if ( YARN ) {
-      sh.exec( "yarn" );
-    } else {
-      sh.exec( "npm install" );
-    }
-    sh.popd();
-    console.log( "Project created successfully." );
   }
-}
+  else if ( cmd.type === "js" ) {
+    console.log( "TSCLI is generating a new JavaScript project..." );
+    sh.cp( "-r", path.resolve( __dirname, "../../.templates/javascript/" ), `${ options.project }` );
+  }
 
+  sh.pushd( `${ options.project }` );
+  sh.mkdir( "./docs", "./logs" );
+  sh.exec( "git init" );
+  sh.exec( "git add -A" );
+  sh.exec( `git commit -q -m "${ commit_message }"` );
+  sh.exec( "git checkout -b dev" );
+  if ( YARN ) {
+    sh.exec( "yarn" );
+  } else {
+    sh.exec( "npm install" );
+  }
+  sh.popd();
+  console.log( "Project created successfully." );
+}
