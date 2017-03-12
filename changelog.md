@@ -2,10 +2,12 @@
 
 All changes to this project will be recorded in this document.
 
-## 0.1.2-alpha-6 (2017-03-??)
+## 0.1.2-alpha-6 (2017-03-12)
 
 * Cleaned project .gitignore files
-* Added support for JavaScript Nodejs project creation
+* Added support for JavaScript NodeJS project creation
+
+The JavaScript NodeJS support speeds up the dev process, specially if you want to try our code quickly. This is done by skipping the compile step and using Nodejs ES6 language support. You will still need to use NodeJS `require` to import files as well as NodeJS modules.
 
 ## 0.1.2-alpha-5 (2017-03-11)
 
