@@ -17,7 +17,7 @@ _________ _______  _______  _       _________
 Initial Commit.
 `;
 function createNewProject(cmd, options) {
-    if (cmd.type === "undefined" || cmd.type === "default") {
+    if (typeof cmd.type === "undefined" || cmd.type === "default") {
         console.log("TSCLI is generating a new default project...");
         sh.cp("-r", path.resolve(__dirname, "../../.templates/default/"), `${options.project}`);
     }

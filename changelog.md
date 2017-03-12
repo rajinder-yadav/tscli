@@ -2,6 +2,11 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-6 (2017-03-??)
+
+* Cleaned project .gitignore files
+* Added support for JavaScript Nodejs project creation
+
 ## 0.1.2-alpha-5 (2017-03-11)
 
 * Fix NPM error of missing depedency.
