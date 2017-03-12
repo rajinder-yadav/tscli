@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.4-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.5-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 

@@ -2,6 +2,12 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-5 (2017-03-11)
+
+* Fix NPM error of missing depedency.
+* New logo image added to README.
+* README corrections.
+
 ## 0.1.2-alpha-4 (2017-03-11)
 
 * Cleaned up NPM scripts.
