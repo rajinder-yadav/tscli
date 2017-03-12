@@ -97,7 +97,7 @@ It is good practice to format the source code, so it conforms to a uniform struc
 npm run format
 ```
 
-_Note_: When the _TSCLI_ generated project is built, the source code will be automatically formated. This will also happen before source code is committed to _Git_.
+_Note_: When the _TSCLI_ generated project is built, the source code will be automatically formatted. This will also happen before source code is committed to _Git_.
 
 ### Linting
 
@@ -115,7 +115,7 @@ Testing is done using _Tape_, the [test methods](http://localhost:3001/) are sim
 
 _Tape_ makes testing simple. Code is easy to read since it is just JavaScript, this avoids the need to context switch to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
 
-I firmily believe less time should be put into writing test code and having more time to write production code. Tape deliver's on this by keeping the setup and test writing to a bare minimum. I believe _Tape_ is the best option for writing unit test for JavaScript based code.
+I firmly believe less time should be put into writing test code and having more time to write production code. Tape delivers on this by keeping the setup and test writing to a bare minimum. I believe _Tape_ is the best option for writing unit test for JavaScript based code.
 
 The test code should be _co-located_ with the production source code. As a best practice, place tests under a sub-folder called `test/`.
 
@@ -175,6 +175,37 @@ This will allow including `<script>` assets from the index.html file like this:
   <script src="../node_modules/zone.js/dist/zone.js"></script>
   <script src="../node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
 </head>
+```
+
+## Create a NodeJS JavaScript project
+
+If you want to develop in plain JavaScript, or develop a ES6 NodeJS based project, this is now supported. It's also good for quickly testing out code and not getting slowed down by the compile step.
+
+You will need the latest version of NodeJS for ES6 and beyond support, otherwise plain JavaScript will continue to work.
+
+```sh
+cli new demo --type js
+npm install
+```
+
+_Note_: You may also use `-t` which is the short-form for `--type`.
+
+The following NPM commands are supported:
+
+NPM script|Description
+----------|-----------
+check|Run code through linter (jslint).|
+dev|Run in watch mode.|
+doc|Generate doc files (jsdocs).|
+format|Format the source code.|
+node:debug|Start debugger, requires Chrome.|
+start|Run the NodeJS program.|
+test|Run Unit testing (tape).|
+
+The plain JavaScript generated file has a development mode. It will run the _Entry_ file (`main.js`) using NodeJS each time the source code is updated. You can develop and see the output from the _terminal_ to test out code quickly.
+
+```sh
+npm run dev
 ```
 
 ## Contributors Wanted
