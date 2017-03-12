@@ -1,8 +1,8 @@
 # TSCLI - JavaScript (ES6) Node generated project
 
-Start playing with the demo (JavaScript ES6) starter project now, the source code is under the project `src/` sub-folder.
+Start playing with the NodeJS demo starter project, the source code is under the project `src/` sub-folder.
 
-If you want to test out JavaScript (ES6) code without the compiler step, this is the fastest way to go. The project will however use Nodejs modules.
+If you want to test out JavaScript (ES6) code without the compiler step, this is the fastest way to go. The project will however use NodeJS modules as well as NodeJS `require` to import files.
 
 ```sh
 npm install
@@ -34,7 +34,7 @@ Place all JavaScript code under the folder, `src/`, they will be picked up from 
 
 You are free to create addition folder and sub-folder under, `src/`, the compiler will recursively find and compile all JavaScript code.
 
-All JavaScript code in run as _ES6_ through Nodejs, make sure you're working with the latest version of Nodejs.
+All JavaScript code in run as _ES6_ through NodeJS, make sure you're working with the latest version of NodeJS.
 
 ### Running
 
