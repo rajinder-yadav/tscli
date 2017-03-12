@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 
+<img src="./img/tscli.svg" width="200">
+
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
 
 Emphasis is put into encouraging the use of best practices and the best tools. I expect things to evolve overtime and settle to something the general practitioner will be happy with.
@@ -111,13 +113,13 @@ _Note_: The TypeScript source code is run through a linter (_TSLint_) before a b
 
 Testing is done using _Tape_, the [test methods](http://localhost:3001/) are simple and easy to learn.
 
-_Tape_ makes testing simple. Code is easy to read since it is just JavaScript, it avoid the need to context switch to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
+_Tape_ makes testing simple. Code is easy to read since it is just JavaScript, this avoids the need to context switch to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
 
-I firmily believe less time should be put into write code and having more time to write production code. Tape deliver's on this by keep the setup and test writing to a bare minimum. I believe _Tape_ is the best option for writing unit test for JavaScript based code.
+I firmily believe less time should be put into writing test code and having more time to write production code. Tape deliver's on this by keeping the setup and test writing to a bare minimum. I believe _Tape_ is the best option for writing unit test for JavaScript based code.
 
 The test code should be _co-located_ with the production source code. As a best practice, place tests under a sub-folder called `test/`.
 
-Pay attention to how the test source file is named: `test.<file>.ts`, so if you have a file called, `filter.ts`, the test file should be named, `test.filter.ts`.
+Pay attention to how the test source file is named: `test.<file>.ts`. So if you have a file called, `filter.ts`, the test file should be named, `test.filter.ts`.
 
 To run the test, type:
 
@@ -137,7 +139,7 @@ npm run web
 
 This will open a web browser on port 3000, and load the HTML page, `index.html` located in the `src/` sub-folder.
 
-Any changes made to `index.html` will automatically update and browser on save. You don not need to keep hitting _refresh_ on the browser.
+Any changes made to `index.html` will automatically update and browser on save. You do not need to keep hitting _refresh_ on the browser.
 
 The website uses _Browsersync_ to run a local development web-server and keeps all browsers listening to it in sync. This means it is possible to have multiple browsers listening to the server.
 
@@ -158,11 +160,11 @@ The default Browsersync UI web address is: `http://localhost:3001/`.
 With Browsersync, having to serve addition CSS and JavaScript files, make sure to add their path in routes. Something similar to like this:
 
 ```js
-    "server": {
-      baseDir: "src",
-      routes: {
-        "/node_modules/tachyons/css":"node_modules/tachyons/css"
-      }
+  "server": {
+    baseDir: "src",
+    routes: {
+      "/node_modules/tachyons/css":"node_modules/tachyons/css"
+    }
 ```
 
 This will allow including `<script>` assets from the index.html file like this:
