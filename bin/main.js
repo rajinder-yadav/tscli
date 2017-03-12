@@ -9,11 +9,12 @@ cmd
     .version(`${data_types_1.VERSION}`)
     .usage("<command> <project> [options...]")
     .arguments("<command> <project>")
-    .option("-t, --type <type>", "Project types: {blank(defautl)|node|web|angular}")
+    .option("-t, --type <type>", "Project types: {blank(defautl)|node|js|web|angular}")
     .action((command, project) => {
     Object.assign(options, { command, project });
 })
     .parse(process.argv);
+console.log(">>", cmd.type);
 switch (options.command) {
     case "new":
         create_new_project_1.createNewProject(cmd, options);
