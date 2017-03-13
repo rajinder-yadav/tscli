@@ -2,6 +2,10 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-9 (2017-03-13)
+
+* Delete .npmignore file, causing problem with generated project.
+
 ## 0.1.2-alpha-8 (2017-03-13)
 
 * Fixed JavaScript project dev script.
