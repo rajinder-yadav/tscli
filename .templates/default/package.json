@@ -11,7 +11,8 @@
     "build": "cross-env NODE_ENV=prod tsc",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
     "clean": "shx rm -rf build",
-    "dev": "cross-env NODE_ENV=dev run-s clean tsc:watch",
+    "dev": "gazeall --runs-npm \"clean build\" \"src/**/*\"",
+    "devwatch": "gazeall --delay-start 350 --run \"node build/main.js\" \"build/main.js\"",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
@@ -32,7 +33,7 @@
     "webbrowser": "browser-sync start --config bs-config.js",
     "webinit": "shx cp src/index.html build",
     "webrefresh": "browser-sync reload",
-    "webwatch": "gazeall --run \"run-s clean build webinit webrefresh\" \"src/**/*\""
+    "webwatch": "gazeall --wait-first --runs-npm \"clean build webinit webrefresh\" \"src/**/*\""
   },
   "keywords": [
     "javascript",
@@ -54,7 +55,7 @@
     "core-js": "^2.4.1",
     "cross-env": "^3.1.4",
     "cross-var": "^1.0.3",
-    "gazeall": "^0.2.0",
+    "gazeall": "^0.2.5",
     "husky": "^0.13.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",

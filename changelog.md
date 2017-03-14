@@ -2,6 +2,12 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-11 (2017-03-14)
+
+* Changed how dev-watch mode works for default template.
+* Fixed how web-watch NPM script for default template.
+* Removed `predev` script from template for JavaScript.
+* Update README in default template.
 
 ## 0.1.2-alpha-10 (2017-03-13)
 
