@@ -2,6 +2,11 @@
 
 All changes to this project will be recorded in this document.
 
+
+## 0.1.2-alpha-10 (2017-03-13)
+
+* Alpha release version bump.
+
 ## 0.1.2-alpha-9 (2017-03-13)
 
 * Delete .npmignore file, causing problem with generated project.
