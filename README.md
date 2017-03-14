@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.10-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.11-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 
@@ -25,12 +25,43 @@ Start playing with the demo starter project now, the source code is under the pr
 ```sh
 cli new demo
 cd demo
+```
+
+_Note_: If you are using _Yarn_ over _NPM_, continue to work with _Yarn_, the TSCLI generated project will use Yarn before NPM if it is available on your system.
+
+## Running a NodeJS program
+
+To simply run a NodeJS program written in TypeScript you can type:
+
+```sh
 npm start
 ```
 
-This will perform a clean build and run the demo program. A log will be produced in the `logs/` sub-folder under the project root.
+This will perform a clean build and run the demo program from the `build/` folder. The demo application log will be produced in the `logs/` sub-folder under the project root.
 
-_Note_: If you are using _Yarn_ over _NPM_, continue to work with _Yarn_.
+### Running and watching during development
+
+You can also continue to watch and run a NodeJS based program during development. To do this open 2 terminals. The first will be used as the build terminal, and the second will be used to run the compiled NodeJS code.
+
+#### Terminal One
+
+This will run the build in watch mode.
+
+```sh
+npm run dev
+```
+
+Wait for the build to complete before issuing the next command.
+
+#### Terminal Two
+
+This will run the NodeJS whenever new files are copied into the `build/` folder.
+
+```sh
+npm run devwatch
+```
+
+There is a delay added before the NodeJS program is executed, this is to prevent premature re-running of code if multiple files are being copied to the `build/` folder. You can change the delay from the `devwatch` script (see file`package.json`) by altering the value passed using the `--delay-start` switch.
 
 ## Benefits
 
