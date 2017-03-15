@@ -24,7 +24,7 @@
     "prefer-const": true,
     "interface-name": [true, "never-prefix"],
     "trailing-comma": [
-      true, {"multiline": "never",
+      true, {"multiline": "always",
         "singleline": "never"}
     ],
     "jsdoc-format": true,
