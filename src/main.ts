@@ -4,7 +4,7 @@ import { VERSION } from "./data-types/data-types";
 
 import { createNewProject } from "./commands/create-new-project";
 
-let options: any = {};
+const options: any = {};
 
 cmd
   .version( `${ VERSION }` )
