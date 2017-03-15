@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.11-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.12-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 # TSCLI - TypeScript Project creator
 
@@ -20,7 +20,7 @@ npm install -g tscli
 
 ## Creating a Project
 
-Start playing with the demo starter project now, the source code is under the project `src/` sub-folder.
+Start playing with the demo starter project now, the generated source code is located in the project `src/` sub-folder.
 
 ```sh
 cli new demo

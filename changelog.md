@@ -2,6 +2,11 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-12 (2017-03-14)
+
+* Deleted a console debug.
+* Minor README update.
+
 ## 0.1.2-alpha-11 (2017-03-14)
 
 * Changed how dev-watch mode works for default template.
