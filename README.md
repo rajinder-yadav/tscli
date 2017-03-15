@@ -2,6 +2,7 @@
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
 ![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.12-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+
 # TSCLI - TypeScript Project creator
 
 ![Image Logo](img/tscli.png)
