@@ -1,22 +1,28 @@
 {
-  "jsRules": {
+  "rules": {
+    "adjacent-overload-signatures": true,
+    "no-magic-numbers": true,
     "prefer-for-of": true,
     "curly": true,
+    "no-arg": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-debugger": true,
     "no-empty": true,
+    "no-invalid-this": true,
     "no-null-keyword": true,
     "no-shadowed-variable": true,
     "no-use-before-declare": true,
+    "no-unused-new": true,
+    "no-unused-variable": [true, "react"],
+    "no-var-keyword": true,
     "switch-default": true,
     "typeof-compare": true,
     "eofline": true,
     "linebreak-style": [true, "LF"],
     "no-require-imports": true,
     "prefer-const": true,
-    "strict-null-checks": true,
-    "no-unused-variable":true,
+    "interface-name": [true, "never-prefix"],
     "trailing-comma": [
       true, {"multiline": "always",
         "singleline": "never"}
@@ -30,10 +36,9 @@
     "triple-equals": [
       true,
       "allow-null-check"
-    ]
-  },
-  "rules": {
+    ],
     "class-name": true,
+    "no-unnecessary-initializer": true,
     "comment-format": [
       true,
       "check-space"
