@@ -14,7 +14,6 @@ cmd
     Object.assign(options, { command, project });
 })
     .parse(process.argv);
-console.log(">>", cmd.type);
 switch (options.command) {
     case "new":
         create_new_project_1.createNewProject(cmd, options);
