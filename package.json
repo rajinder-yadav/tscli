@@ -43,18 +43,18 @@
     "@types/commander": "^2.3.31",
     "@types/node": "^7.0.8",
     "@types/tape": "^4.2.29",
-    "cross-env": "^3.2.3",
+    "cross-env": "^3.2.4",
     "cross-var": "^1.0.3",
     "husky": "^0.13.2",
     "npm-run-all": "^4.0.2",
     "shx": "^0.2.2",
     "tap-summary": "^3.0.1",
     "tape": "^4.6.3",
-    "tape-run": "^2.4.1",
+    "tape-run": "^3.0.0",
     "tslint": "^4.5.1",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
-    "typescript-formatter": "^5.1.1"
+    "typescript-formatter": "^5.1.2"
   },
   "dependencies": {
     "commander": "^2.9.0",

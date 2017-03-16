@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "core-js": "^2.4.1",
-    "cross-env": "^3.1.4",
+    "cross-env": "^3.2.4",
     "cross-var": "^1.0.3",
     "eslint": "^3.17.1",
     "gazeall": "^0.2.5",
@@ -44,7 +44,7 @@
     "tachyons": "^4.6.2",
     "tap-summary": "^3.0.1",
     "tape": "^4.6.3",
-    "tape-run": "^2.2.1"
+    "tape-run": "^3.0.0"
   },
   "dependencies": {
     "bunyan": "^1.8.8"
