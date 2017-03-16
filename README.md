@@ -2,6 +2,7 @@
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
 ![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.13-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+[![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
 # TSCLI - TypeScript Project creator
 
