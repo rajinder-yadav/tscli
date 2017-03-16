@@ -796,14 +796,14 @@ browser-launcher@^1.0.0:
     plist "0.2.1"
     xtend "^4.0.0"
 
-browser-run@^3.6.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/browser-run/-/browser-run-3.6.1.tgz#cc168aa12cc49230fb576badef2d13e96f8492a0"
+browser-run@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/browser-run/-/browser-run-4.0.1.tgz#6786f1cc76a8df053834e81a85bd01f1e6de8928"
   dependencies:
     browser-launcher "^1.0.0"
     duplexer "^0.1.1"
     ecstatic "^2.0.0"
-    electron-stream "^4.0.0"
+    electron-stream "^5.0.0"
     enstore "^1.0.1"
     html-inject-script "^1.1.0"
     optimist "^0.6.1"
@@ -955,7 +955,7 @@ create-error-class@^3.0.0:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-cross-env@^3.2.3:
+cross-env@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-3.2.4.tgz#9e0585f277864ed421ce756f81a980ff0d698aba"
   dependencies:
@@ -1131,9 +1131,9 @@ electron-download@^3.0.1:
     semver "^5.3.0"
     sumchecker "^1.2.0"
 
-electron-stream@^4.0.0:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/electron-stream/-/electron-stream-4.2.2.tgz#fc08779c957ef5da95eb7e6209e0b875074509b3"
+electron-stream@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/electron-stream/-/electron-stream-5.0.1.tgz#d28ad8a3ef5b3f5ef137d92e7ec1247328b7fa1f"
   dependencies:
     debug "^2.6.1"
     electron "^1.4.4"
@@ -2596,12 +2596,12 @@ tap-summary@^3.0.1:
     pretty-ms "^2.1.0"
     tap-out "^1.4.1"
 
-tape-run@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/tape-run/-/tape-run-2.4.1.tgz#9ea6ad5552d3162f2eff1425f96824e3eb162f55"
+tape-run@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tape-run/-/tape-run-3.0.0.tgz#f7085ef4b69502bb6b3590e3ef72f94d27c998cc"
   dependencies:
     "@juliangruber/tap-finished" "0.0.2"
-    browser-run "^3.6.0"
+    browser-run "^4.0.1"
     optimist "~0.6.1"
     through "~2.3.4"
     throughout "0.0.0"
@@ -2765,9 +2765,9 @@ typedoc@^0.5.7:
     typedoc-default-themes "^0.4.2"
     typescript "2.1.6"
 
-typescript-formatter@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/typescript-formatter/-/typescript-formatter-5.1.1.tgz#6bbf7e8e48bafad0e2b8cf0c02ec7db24635110d"
+typescript-formatter@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/typescript-formatter/-/typescript-formatter-5.1.2.tgz#dfb779839aa9357b2f3a941dfa006f2346e8d9db"
   dependencies:
     commandpost "^1.0.0"
     editorconfig "^0.13.2"
