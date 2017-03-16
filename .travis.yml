@@ -13,6 +13,7 @@ script:
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
 matrix:
   fast_finish: true
 
