@@ -972,14 +972,14 @@ browser-resolve@^1.11.0, browser-resolve@^1.7.0:
   dependencies:
     resolve "1.1.7"
 
-browser-run@^3.6.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/browser-run/-/browser-run-3.6.1.tgz#cc168aa12cc49230fb576badef2d13e96f8492a0"
+browser-run@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/browser-run/-/browser-run-4.0.1.tgz#6786f1cc76a8df053834e81a85bd01f1e6de8928"
   dependencies:
     browser-launcher "^1.0.0"
     duplexer "^0.1.1"
     ecstatic "^2.0.0"
-    electron-stream "^4.0.0"
+    electron-stream "^5.0.0"
     enstore "^1.0.1"
     html-inject-script "^1.1.0"
     optimist "^0.6.1"
@@ -1438,11 +1438,7 @@ constants-browserify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
 
-convert-source-map@^1.1.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.4.0.tgz#e3dad195bf61bfe13a7a3c73e9876ec14a0268f3"
-
-convert-source-map@~1.1.0:
+convert-source-map@^1.1.0, convert-source-map@~1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.1.3.tgz#4829c877e9fe49b3161f3bf3673888e204699860"
 
@@ -1487,7 +1483,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
-cross-env@^3.1.4:
+cross-env@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-3.2.4.tgz#9e0585f277864ed421ce756f81a980ff0d698aba"
   dependencies:
@@ -1782,9 +1778,9 @@ electron-download@^3.0.1:
     semver "^5.3.0"
     sumchecker "^1.2.0"
 
-electron-stream@^4.0.0:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/electron-stream/-/electron-stream-4.2.2.tgz#fc08779c957ef5da95eb7e6209e0b875074509b3"
+electron-stream@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/electron-stream/-/electron-stream-5.0.1.tgz#d28ad8a3ef5b3f5ef137d92e7ec1247328b7fa1f"
   dependencies:
     debug "^2.6.1"
     electron "^1.4.4"
@@ -2183,9 +2179,9 @@ gaze@^1.1.2:
   dependencies:
     globule "^1.0.0"
 
-gazeall@^0.2.0:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/gazeall/-/gazeall-0.2.4.tgz#6946f37e90cf03cc042a7c0a55e7a260190c8b8c"
+gazeall@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/gazeall/-/gazeall-0.2.5.tgz#53278d2384ecb3bf5d1fdff63b66b979ff2b3a4c"
   dependencies:
     commander "^2.9.0"
     gaze "^1.1.2"
@@ -3693,13 +3689,13 @@ qs@6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 
-"qs@>= 0.4.0", qs@~6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
-
-qs@~6.3.0:
+"qs@>= 0.4.0", qs@~6.3.0:
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.2.tgz#e75bd5f6e268122a2a0e0bda630b2550c166502c"
+
+qs@~6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
 querystring-es3@~0.2.0:
   version "0.2.1"
@@ -4494,12 +4490,12 @@ tap-summary@^3.0.1:
     pretty-ms "^2.1.0"
     tap-out "^1.4.1"
 
-tape-run@^2.2.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/tape-run/-/tape-run-2.4.1.tgz#9ea6ad5552d3162f2eff1425f96824e3eb162f55"
+tape-run@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tape-run/-/tape-run-3.0.0.tgz#f7085ef4b69502bb6b3590e3ef72f94d27c998cc"
   dependencies:
     "@juliangruber/tap-finished" "0.0.2"
-    browser-run "^3.6.0"
+    browser-run "^4.0.1"
     optimist "~0.6.1"
     through "~2.3.4"
     throughout "0.0.0"
@@ -4664,7 +4660,7 @@ trumpet@^1.7.1:
     readable-stream "^1.0.27-1"
     through2 "^1.0.0"
 
-tslint@^4.4.2:
+tslint@^4.5.1:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-4.5.1.tgz#05356871bef23a434906734006fc188336ba824b"
   dependencies:
@@ -4730,9 +4726,9 @@ typedoc@^0.5.7:
     typedoc-default-themes "^0.4.2"
     typescript "2.1.6"
 
-typescript-formatter@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/typescript-formatter/-/typescript-formatter-5.1.1.tgz#6bbf7e8e48bafad0e2b8cf0c02ec7db24635110d"
+typescript-formatter@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/typescript-formatter/-/typescript-formatter-5.1.2.tgz#dfb779839aa9357b2f3a941dfa006f2346e8d9db"
   dependencies:
     commandpost "^1.0.0"
     editorconfig "^0.13.2"
