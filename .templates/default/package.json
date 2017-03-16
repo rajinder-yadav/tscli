@@ -16,7 +16,6 @@
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
-    "postweb": "watch-run -p \"/tmp/test-build/src/**\" npm run web",
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
@@ -34,7 +33,7 @@
     "webinit": "shx cp src/index.html build",
     "webrefresh": "browser-sync reload",
     "webwatch": "gazeall --wait-first --runs-npm \"clean build webinit webrefresh\" \"src/**/*\""
-  },
+ },
   "keywords": [
     "javascript",
     "js",
