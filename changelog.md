@@ -4,8 +4,9 @@ All changes to this project will be recorded in this document.
 
 ## 0.1.2-alpha-15 (2017-03-17)
 
-* Switch to using tap for testing.
-* Added concoverage.
+* Switch to using Ava for testing.
+* Added code coverage.
+* Updated README with test coverage details.
 
 ## 0.1.2-alpha-14 (2017-03-17)
 
