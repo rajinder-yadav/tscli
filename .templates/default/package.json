@@ -38,7 +38,9 @@
     "javascript",
     "js",
     "ts",
-    "typescript"
+    "typescript",
+    "nodejs",
+    "web"
   ],
   "author": "[Full name] <email-inside-brackets> (project-github-repo-inside bracker)",
   "license": "GPL-3.0",
