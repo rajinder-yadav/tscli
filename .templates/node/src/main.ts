@@ -11,7 +11,7 @@ const log = bunyan.createLogger( {
 } );
 
 const welcome = (): string => {
-  return "Welcome to TSCLI - Demo program is working!";
+  return "Welcome to TSCLI - Node.js demo program is working!";
 };
 
 log.info( "Entering main" );

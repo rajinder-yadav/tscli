@@ -22,7 +22,7 @@ function createNewProject(cmd, options) {
         sh.cp("-r", path.resolve(__dirname, "../../.templates/default/"), `${options.project}`);
     }
     else if (cmd.type === "node") {
-        console.log("TSCLI is generating a new NodeJS project...");
+        console.log("TSCLI is generating a new Node.js project...");
         sh.cp("-r", path.resolve(__dirname, "../../.templates/node/"), `${options.project}`);
     }
     else if (cmd.type === "js") {
