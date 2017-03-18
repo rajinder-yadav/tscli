@@ -22,6 +22,10 @@ export function createNewProject( cmd: any, options: any ): void {
     console.log( "TSCLI is generating a new default project..." );
     sh.cp( "-r", path.resolve( __dirname, "../../.templates/default/" ), `${ options.project }` );
   }
+  else if ( cmd.type === "node" ) {
+    console.log( "TSCLI is generating a new Node.js project..." );
+    sh.cp( "-r", path.resolve( __dirname, "../../.templates/node/" ), `${ options.project }` );
+  }
   else if ( cmd.type === "js" ) {
     console.log( "TSCLI is generating a new JavaScript project..." );
     sh.cp( "-r", path.resolve( __dirname, "../../.templates/javascript/" ), `${ options.project }` );
