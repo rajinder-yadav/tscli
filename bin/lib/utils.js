@@ -4,7 +4,7 @@ exports.hello = () => {
     return "Hello TSCLI!";
 };
 function goodbye() {
-    return "See you back =)";
+    return "See you later =)";
 }
 exports.goodbye = goodbye;
 //# sourceMappingURL=utils.js.map

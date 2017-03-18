@@ -6,6 +6,7 @@ log/
 node_modules/
 tmp/
 typings/
+.nyc_output/
 
 *.bak
 *.log

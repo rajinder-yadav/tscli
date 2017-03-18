@@ -2,6 +2,11 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-15 (2017-03-17)
+
+* Switch to using tap for testing.
+* Added concoverage.
+
 ## 0.1.2-alpha-14 (2017-03-17)
 
 * Added project creation for Node.js

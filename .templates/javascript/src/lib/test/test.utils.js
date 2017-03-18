@@ -1,12 +1,10 @@
-const test = require("tape");
+const test = require("ava").test;
 const utils = require("../utils");
 
-test("hello", t => {
-  t.equal(utils.hello(), "Hello TSCLI!");
-  t.end();
-});
+test( "hello", t => {
+  t.is( utils.hello(), "Hello TSCLI!" );
+} );
 
-test("goodbye", t => {
-  t.equal(utils.goodbye(), "See you later =)");
-  t.end();
-});
+test( "goodbye", t => {
+  t.is( utils.goodbye(), "See you later =)" );
+} );

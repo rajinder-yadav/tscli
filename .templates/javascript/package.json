@@ -17,7 +17,7 @@
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
     "start": "node $npm_package_config_main",
-    "test": "tape \"src/**/*/test.*.js\"|tap-summary"
+    "test": "nyc ava --tap \"src/**/*/test.*.js\"|tap-summary"
   },
   "keywords": [
     "javascript",
@@ -31,6 +31,7 @@
     "url": "https://github.com/<github-user-id>/<project-name>"
   },
   "devDependencies": {
+    "ava": "^0.18.2",
     "core-js": "^2.4.1",
     "cross-env": "^3.2.4",
     "cross-var": "^1.0.3",
@@ -39,14 +40,36 @@
     "husky": "^0.13.2",
     "jsdocs": "^0.1.0",
     "npm-run-all": "^4.0.2",
+    "nyc": "^10.1.2",
     "prettier": "^0.22.0",
     "shx": "^0.2.2",
     "tachyons": "^4.6.2",
-    "tap-summary": "^3.0.1",
-    "tape": "^4.6.3",
-    "tape-run": "^3.0.0"
+    "tap-summary": "^3.0.1"
   },
   "dependencies": {
     "bunyan": "^1.8.8"
+  },
+  "nyc": {
+    "lines": 10,
+    "statements": 10,
+    "functions": 10,
+    "branches": 10,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "src/**/*.spec.js",
+      "src/**/test.*.js",
+      "src/**/main.js"
+    ],
+    "reporter": [
+      "text",
+      "lcov",
+      "text-summary",
+      "html"
+    ],
+    "cache": true,
+    "all": true,
+    "check-coverage": true
   }
 }

@@ -16,15 +16,16 @@ _Note_: If you are using _Yarn_, continue to work with _Yarn_.
 Here are the benefits you will enjoy right out of the gate:
 
 * Quick start
-* Best Practices
+* Best practices
 * Build system
-* Code in JavaScript ES6(ES2015)
-* Code Node Modules
 * Error logging
-* Code Linting
-* Code Formatting
-* Document Generation
+* Code linting
+* Code formatting
+* Unit testing
+* Code coverage
+* Document generation
 * Git commit hooks
+* Continuous integration (under research)
 
 ## JavaScript development
 
@@ -88,11 +89,11 @@ _Note_: The JavaScript code is run through the linter before a build and before 
 
 ### Testing
 
-Testing is done use _Tape_, the [test methods](http://localhost:3001/) are simple and easy to learn.
+Testing is done use _Tap_, the [test methods](http://localhost:3001/) are simple and easy to learn.
 
-_Tape_ makes testing simple. Code is easy to read since it is just JavaScript, since there is no context switching to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
+_Tap_ makes testing simple. Code is easy to read since it is just JavaScript, since there is no context switching to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
 
-Moreover less time should be put into writing test, and more time allowed for development coding. I believe _Tape_ is the best option for writing unit test for JavaScript code.
+Moreover less time should be put into writing test, and more time allowed for development coding. I believe _Tap_ is the best option for writing unit test for JavaScript code.
 
 The test code should be _co-located_ with the source being tested. As a best practice, place test under a sub-folder called `test/`.
 
@@ -103,3 +104,9 @@ To run the test, type:
 ```sh
 npm test
 ```
+
+## Test coverage
+
+Test coverage is done when testing is run using `nyc`. The test coverage result is displayed to the console after the results of the unit tests. A folder called `coverage/` will be created under the project root. It will hold the results of the code coverage from the test run. Of interest to you will by the HTML report which is a nice way to see what code was covered and what code was not by the unit tests.
+
+To configure the test coverage, make changes to the `nyc` settings found in the file `package.json`.

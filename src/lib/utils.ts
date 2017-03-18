@@ -3,5 +3,5 @@ export const hello = (): string => {
 };
 
 export function goodbye(): string {
-  return "See you back =)";
+  return "See you later =)";
 }
