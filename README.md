@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.13-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.14-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
@@ -31,9 +31,9 @@ cd demo
 
 _Note_: If you are using _Yarn_ over _NPM_, continue to work with _Yarn_, the TSCLI generated project will use Yarn before NPM if it is available on your system.
 
-## Running a NodeJS program
+## Running a Node.js program
 
-To simply run a NodeJS program written in TypeScript you can type:
+To simply run a Node.js program written in TypeScript you can type:
 
 ```sh
 npm start
@@ -43,7 +43,7 @@ This will perform a clean build and run the demo program from the `build/` folde
 
 ### Running and watching during development
 
-You can also continue to watch and run a NodeJS based program during development. To do this open 2 terminals. The first will be used as the build terminal, and the second will be used to run the compiled NodeJS code.
+You can also continue to watch and run a Node.js based program during development. To do this open 2 terminals. The first will be used as the build terminal, and the second will be used to run the compiled Node.js code.
 
 #### Terminal One
 
@@ -57,13 +57,13 @@ Wait for the build to complete before issuing the next command.
 
 #### Terminal Two
 
-This will run the NodeJS whenever new files are copied into the `build/` folder.
+This will run the Node.js whenever new files are copied into the `build/` folder.
 
 ```sh
 npm run devwatch
 ```
 
-There is a delay added before the NodeJS program is executed, this is to prevent premature re-running of code if multiple files are being copied to the `build/` folder. You can change the delay from the `devwatch` script (see file`package.json`) by altering the value passed using the `--delay-start` switch.
+There is a delay added before the Node.js program is executed, this is to prevent premature re-running of code if multiple files are being copied to the `build/` folder. You can change the delay from the `devwatch` script (see file`package.json`) by altering the value passed using the `--delay-start` switch.
 
 ## Benefits
 
@@ -210,11 +210,11 @@ This will allow including `<script>` assets from the index.html file like this:
 </head>
 ```
 
-## Create a NodeJS JavaScript project
+## Create a Node.js JavaScript project
 
-If you want to develop in plain JavaScript, or develop a ES6 NodeJS based project, this is now supported. It's also good for quickly testing out code and not getting slowed down by the compile step.
+If you want to develop in plain JavaScript, or develop a ES6 Node.js based project, this is now supported. It's also good for quickly testing out code and not getting slowed down by the compile step.
 
-You will need the latest version of NodeJS for ES6 and beyond support, otherwise plain JavaScript will continue to work.
+You will need the latest version of Node.js for ES6 and beyond support, otherwise plain JavaScript will continue to work.
 
 ```sh
 cli new demo --type js
@@ -232,10 +232,10 @@ dev|Run in watch mode.|
 doc|Generate doc files (jsdocs).|
 format|Format the source code.|
 node:debug|Start debugger, requires Chrome.|
-start|Run the NodeJS program.|
+start|Run the Node.js program.|
 test|Run Unit testing (tape).|
 
-The plain JavaScript generated file has a development mode. It will run the _Entry_ file (`main.js`) using NodeJS each time the source code is updated. You can develop and see the output from the _terminal_ to test out code quickly.
+The plain JavaScript generated file has a development mode. It will run the _Entry_ file (`main.js`) using Node.js each time the source code is updated. You can develop and see the output from the _terminal_ to test out code quickly.
 
 ```sh
 npm run dev
