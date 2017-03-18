@@ -1,13 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const test = require("tape");
+const ava_1 = require("ava");
 const utils = require("../utils");
-test("hello", t => {
-    t.equal(utils.hello(), "Hello TSCLI!");
-    t.end();
+ava_1.test("hello", t => {
+    t.is(utils.hello(), "Hello TSCLI!");
 });
-test("goodbye", t => {
-    t.equal(utils.goodbye(), "See you back =)");
-    t.end();
+ava_1.test("goodbye", t => {
+    t.is(utils.goodbye(), "See you later =)");
 });
 //# sourceMappingURL=test.utils.js.map

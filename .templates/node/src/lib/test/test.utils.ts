@@ -1,12 +1,10 @@
-import * as test from "tape";
+import { test } from "ava";
 import * as utils from "../utils";
 
 test( "hello", t => {
-  t.equal( utils.hello(), "Hello TSCLI!" );
-  t.end();
+  t.is( utils.hello(), "Hello TSCLI!" );
 } );
 
 test( "goodbye", t => {
-  t.equal( utils.goodbye(), "See you later =)" );
-  t.end();
+  t.is( utils.goodbye(), "See you later =)" );
 } );

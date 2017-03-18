@@ -12,7 +12,7 @@
     "noUnusedParameters": true,
     "outDir": "./build",
     "removeComments": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "target": "es6"
   },
   "include": [

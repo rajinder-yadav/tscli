@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.14-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.15-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
@@ -70,15 +70,17 @@ There is a delay added before the Node.js program is executed, this is to preven
 Here are the benefits you will enjoy right out of the gate:
 
 * Quick start
-* Best Practices
+* Best practices
 * Build system
 * Code in TypeScript
 * Code TypeScript Modules
 * HTML live edit and preview
 * Error logging
-* Code Linting
-* Code Formatting
-* Document Generation
+* Code linting
+* Code formatting
+* Unit testing
+* Code coverage
+* Document generation
 * Git commit hooks
 * Continuous integration (under research)
 
@@ -144,11 +146,11 @@ _Note_: The TypeScript source code is run through a linter (_TSLint_) before a b
 
 ### Testing
 
-Testing is done using _Tape_, the [test methods](http://localhost:3001/) are simple and easy to learn.
+Testing is done using _Tap_, the [test methods](http://localhost:3001/) are simple and easy to learn.
 
-_Tape_ makes testing simple. Code is easy to read since it is just JavaScript, this avoids the need to context switch to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
+_Tap_ makes testing simple. Code is easy to read since it is just JavaScript, this avoids the need to context switch to BDD syntax. Plus anyone who knows JavaScript will be able to write test code immediately.
 
-I firmly believe less time should be put into writing test code and having more time to write production code. Tape delivers on this by keeping the setup and test writing to a bare minimum. I believe _Tape_ is the best option for writing unit test for JavaScript based code.
+I firmly believe less time should be put into writing test code and having more time to write production code. Tap delivers on this by keeping the setup and test writing to a bare minimum. I believe _Tap_ is the best option for writing unit test for JavaScript based code.
 
 The test code should be _co-located_ with the production source code. As a best practice, place tests under a sub-folder called `test/`.
 
@@ -233,7 +235,7 @@ doc|Generate doc files (jsdocs).|
 format|Format the source code.|
 node:debug|Start debugger, requires Chrome.|
 start|Run the Node.js program.|
-test|Run Unit testing (tape).|
+test|Run Unit testing (tap).|
 
 The plain JavaScript generated file has a development mode. It will run the _Entry_ file (`main.js`) using Node.js each time the source code is updated. You can develop and see the output from the _terminal_ to test out code quickly.
 

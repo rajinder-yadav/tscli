@@ -1,6 +1,6 @@
 {
   "name": "tscli",
-  "version": "0.1.2-alpha.14",
+  "version": "0.1.2-alpha.15",
   "description": "TypeScript CLI project generator",
   "main": "src/main.ts",
   "bin": {
@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=prod tsc",
+    "build:test": "cross-env NODE_ENV=test tsc -p ./tsconfig.test.json",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
     "clean": "shx rm -rf bin && shx rm -rf build",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
@@ -21,8 +22,8 @@
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
-    "pretest": "run-s build",
-    "test": "tape \"bin/**/*/test.*.js\"|tap-summary"
+    "pretest": "run-s clean build:test",
+    "test": "cross-env NODE_ENV=test nyc ava --tap \"bin/**/*/test.*.js\"|tap-summary"
   },
   "keywords": [
     "javascript",
@@ -42,15 +43,14 @@
   "devDependencies": {
     "@types/commander": "^2.3.31",
     "@types/node": "^7.0.8",
-    "@types/tape": "^4.2.29",
+    "ava": "^0.18.2",
     "cross-env": "^3.2.4",
     "cross-var": "^1.0.3",
     "husky": "^0.13.2",
     "npm-run-all": "^4.0.2",
+    "nyc": "^10.1.2",
     "shx": "^0.2.2",
     "tap-summary": "^3.0.1",
-    "tape": "^4.6.3",
-    "tape-run": "^3.0.0",
     "tslint": "^4.5.1",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
@@ -59,5 +59,28 @@
   "dependencies": {
     "commander": "^2.9.0",
     "shelljs": "^0.7.7"
+  },
+  "nyc": {
+    "lines": 10,
+    "statements": 10,
+    "functions": 10,
+    "branches": 10,
+    "include": [
+      "bin/**/*.js"
+    ],
+    "exclude": [
+      "bin/**/*.spec.js",
+      "bin/**/test.*.js",
+      "bin/**/main.js"
+    ],
+    "reporter": [
+      "text",
+      "lcov",
+      "text-summary",
+      "html"
+    ],
+    "cache": true,
+    "all": true,
+    "check-coverage": true
   }
 }

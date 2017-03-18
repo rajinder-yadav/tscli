@@ -10,9 +10,9 @@
     "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./build",
+    "outDir": "./bin",
     "removeComments": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "target": "es6"
   },
   "include": [
