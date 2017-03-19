@@ -6,7 +6,7 @@
 
 # TSCLI - TypeScript Project creator
 
-![Image Logo](img/tscli.png)
+![Image Logo](img/tscli-2.png)
 
 The _TSCLI_ project is in the process of becoming a general purpose CLI project generator for TypeScript based code.
 
