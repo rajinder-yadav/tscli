@@ -2,6 +2,12 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-17 (2017-03-19)
+
+* Version bump
+* Project creation supported are: Default, JS, Node.js
+* UpCorrected TSCLI usage text for supported projects.
+* Updated README
 
 ## 0.1.2-alpha-16 (2017-03-19)
 

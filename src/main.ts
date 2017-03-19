@@ -10,7 +10,7 @@ cmd
   .version( `${ VERSION }` )
   .usage( "<command> <project> [options...]" )
   .arguments( "<command> <project>" )
-  .option( "-t, --type <type>", "Project types: {blank(defautl)|node|js|web|angular}" )
+  .option( "-t, --type <type>", "Project types: {blank(defautl)|node|js}" )
   .action(( command: string, project: string ) => {
     Object.assign( options, { command, project } );
   } )
