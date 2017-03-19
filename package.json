@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=prod tsc",
     "build:test": "cross-env NODE_ENV=test tsc -p ./tsconfig.test.json",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
-    "clean": "shx rm -rf bin && shx rm -rf build",
+    "clean": "shx rm -rf bin && shx rm -rf bin",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_bin_cli",
@@ -21,9 +21,9 @@
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
-    "prepush": "run-s test",
-    "pretest": "cross-env NODE_ENV=test run-s clean build:test",
-    "test": "nyc ava --tap \"build/**/*/test.*.js\"|tap-summary"
+    "prepush": "npm run test",
+    "pretest": "run-s clean build:test",
+    "test": "nyc ava --tap \"bin/**/*/test.*.js\"|tap-summary"
   },
   "keywords": [
     "javascript",
