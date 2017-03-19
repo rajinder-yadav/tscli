@@ -2,6 +2,14 @@
 
 All changes to this project will be recorded in this document.
 
+
+## 0.1.2-alpha-16 (2017-03-??)
+
+* Added test watch NPM script.
+* Fixed delay switch in NPM scripts.
+* Removed magic-number lint check, doesn't work as you might expect.
+* Fixed pretest script use on cross-env.
+
 ## 0.1.2-alpha-15 (2017-03-17)
 
 * Switch to using Ava for testing.
