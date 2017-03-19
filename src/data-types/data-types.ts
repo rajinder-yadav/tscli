@@ -1,6 +1,6 @@
 import * as sh from "shelljs";
 
 // Update for each release
-export const VERSION = "0.1.2-alpha.15";
+export const VERSION = "0.1.2-alpha.16";
 
 export const YARN = sh.which( "yarn" );

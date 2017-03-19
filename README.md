@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.15-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.16-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
@@ -43,7 +43,13 @@ This will perform a clean build and run the demo program from the `build/` folde
 
 ### Running and watching during development
 
-You can also continue to watch and run a Node.js based program during development. To do this open 2 terminals. The first will be used as the build terminal, and the second will be used to run the compiled Node.js code.
+You can also continue to watch and run a Node.js based program during development. To do this open three terminals.
+
+* Terminal 1: The build terminal.
+* Terminal 2: Run the compiled Node.js code.
+* Terminal 3: Watch test results.
+
+**Important!**: If you're encounter strange build errors in one of the terminal, it could be due to linting errors or compiler error. This unfortunately doesn't make it to the terminal since these operation are running through another NPM script. So to quick see what's failing, from another terminal type, `npm run build`, this will quickly let you see the problem.
 
 #### Terminal One
 
@@ -61,6 +67,14 @@ This will run the Node.js whenever new files are copied into the `build/` folder
 
 ```sh
 npm run devwatch
+```
+
+#### Terminal Three
+
+This runs the unit tests in watch mode.
+
+```sh
+npm run testwatch
 ```
 
 There is a delay added before the Node.js program is executed, this is to prevent premature re-running of code if multiple files are being copied to the `build/` folder. You can change the delay from the `devwatch` script (see file`package.json`) by altering the value passed using the `--delay-start` switch.

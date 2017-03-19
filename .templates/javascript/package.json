@@ -8,16 +8,20 @@
     "doc_folder": "docs/jsdoc"
   },
   "scripts": {
+    "ava": "ava --tap \"src/**/*/test.*.js\"|tap-summary",
+    "ava:coverage": "nyc ava --tap \"src/**/*/test.*.js\"|tap-summary",
     "check": "eslint \"src/**/*.js\"",
-    "dev": "gazeall --run \"node src/main.js\" \"src/**/*\"",
+    "devwatch": "gazeall --run \"node src/main.js\" \"src/**/*\"",
     "doc": "jsdocs src $npm_package_config_doc_folder",
     "format": "prettier --write \"src/**/*.js\"",
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
-    "prepush": "run-s test",
+    "prepush": "npm run test",
     "start": "node $npm_package_config_main",
-    "test": "nyc ava --tap \"src/**/*/test.*.js\"|tap-summary"
+    "test": "npm run ava:coverage",
+    "testwatch": "gazeall --runs-npm ava \"src/**/*\""
+
   },
   "keywords": [
     "javascript",

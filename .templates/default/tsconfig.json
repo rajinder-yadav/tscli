@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./bin",
+    "declarationDir": "./build",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",

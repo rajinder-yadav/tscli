@@ -1,6 +1,6 @@
 {
   "name": "tscli",
-  "version": "0.1.2-alpha.15",
+  "version": "0.1.2-alpha.16",
   "description": "TypeScript CLI project generator",
   "main": "src/main.ts",
   "bin": {
@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=prod tsc",
     "build:test": "cross-env NODE_ENV=test tsc -p ./tsconfig.test.json",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
-    "clean": "shx rm -rf bin && shx rm -rf build",
+    "clean": "shx rm -rf bin && shx rm -rf bin",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_bin_cli",
@@ -21,9 +21,9 @@
     "prebuild": "run-s format check clean",
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
-    "prepush": "run-s test",
+    "prepush": "npm run test",
     "pretest": "run-s clean build:test",
-    "test": "cross-env NODE_ENV=test nyc ava --tap \"bin/**/*/test.*.js\"|tap-summary"
+    "test": "nyc ava --tap \"bin/**/*/test.*.js\"|tap-summary"
   },
   "keywords": [
     "javascript",
@@ -32,7 +32,8 @@
     "starter",
     "ts",
     "tscli",
-    "typescript"
+    "typescript",
+    "nodejs"
   ],
   "author": "Rajinder Yadav <devguy.ca@gmail.com> (https://github.com/rajinder-yadav)",
   "license": "GPL-3.0",
