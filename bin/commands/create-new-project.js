@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const sh = require("shelljs");
 const path = require("path");
+const fs = require("fs");
 const data_types_1 = require("../data-types/data-types");
 const commit_message = `
 This Project was generated using TSCLI (${data_types_1.VERSION}).
@@ -17,6 +18,10 @@ _________ _______  _______  _       _________
 Initial Commit.
 `;
 function createNewProject(cmd, options) {
+    if (fs.existsSync(options.project)) {
+        console.log(`Folder ${options.project} already exists!`);
+        return;
+    }
     if (typeof cmd.type === "undefined" || cmd.type === "default") {
         console.log("TSCLI is generating a new default project...");
         sh.cp("-r", path.resolve(__dirname, "../../.templates/default/"), `${options.project}`);
@@ -42,7 +47,7 @@ function createNewProject(cmd, options) {
         sh.exec("npm install");
     }
     sh.popd();
-    console.log("Project created successfully.");
+    console.log(`Project ${options.project} created successfully.`);
 }
 exports.createNewProject = createNewProject;
 //# sourceMappingURL=create-new-project.js.map

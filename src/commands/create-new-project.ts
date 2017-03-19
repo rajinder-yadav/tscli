@@ -1,5 +1,6 @@
 import * as sh from "shelljs";
 import * as path from "path";
+import * as fs from "fs";
 
 import { VERSION, YARN } from "../data-types/data-types";
 
@@ -18,6 +19,12 @@ Initial Commit.
 `;
 
 export function createNewProject( cmd: any, options: any ): void {
+
+  if ( fs.existsSync( options.project ) ) {
+    console.log( `Folder ${ options.project } already exists!` );
+    return;
+  }
+
   if ( typeof cmd.type === "undefined" || cmd.type === "default" ) {
     console.log( "TSCLI is generating a new default project..." );
     sh.cp( "-r", path.resolve( __dirname, "../../.templates/default/" ), `${ options.project }` );
@@ -37,11 +44,13 @@ export function createNewProject( cmd: any, options: any ): void {
   sh.exec( "git add -A" );
   sh.exec( `git commit -q -m "${ commit_message }"` );
   sh.exec( "git checkout -b dev" );
+
   if ( YARN ) {
     sh.exec( "yarn" );
   } else {
     sh.exec( "npm install" );
   }
+
   sh.popd();
-  console.log( "Project created successfully." );
+  console.log( `Project ${ options.project } created successfully.` );
 }
