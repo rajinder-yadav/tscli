@@ -22,8 +22,8 @@
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
     "prepush": "run-s test",
-    "pretest": "run-s clean build:test",
-    "test": "cross-env NODE_ENV=test nyc ava --tap \"bin/**/*/test.*.js\"|tap-summary"
+    "pretest": "cross-env NODE_ENV=test run-s clean build:test",
+    "test": "nyc ava --tap \"build/**/*/test.*.js\"|tap-summary"
   },
   "keywords": [
     "javascript",
@@ -32,7 +32,8 @@
     "starter",
     "ts",
     "tscli",
-    "typescript"
+    "typescript",
+    "nodejs"
   ],
   "author": "Rajinder Yadav <devguy.ca@gmail.com> (https://github.com/rajinder-yadav)",
   "license": "GPL-3.0",
