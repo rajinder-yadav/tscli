@@ -17,9 +17,9 @@
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
     "precommit": "run-s format check",
     "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
-    "prepush": "run-s test",
+    "prepush": "npm run test",
     "start": "node $npm_package_config_main",
-    "test": "run-s ava:coverage",
+    "test": "npm run ava:coverage",
     "testwatch": "gazeall --runs-npm ava \"src/**/*\""
 
   },
