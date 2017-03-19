@@ -1,7 +1,7 @@
 {
   "rules": {
     "adjacent-overload-signatures": true,
-    "no-magic-numbers": true,
+    "no-magic-numbers": false,
     "prefer-for-of": true,
     "curly": true,
     "no-arg": true,
