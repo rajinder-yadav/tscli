@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.16-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.17-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
@@ -13,6 +13,14 @@ The _TSCLI_ project is in the process of becoming a general purpose CLI project 
 Emphasis is put into encouraging the use of best practices and the best tools. I expect things to evolve overtime and settle to something the general practitioner will be happy with.
 
 Currently the _TSCLI_ default project template is being used to solidify concepts and setup.
+
+## Project Types
+
+The following basic project type that can be created using TSCLI are:
+
+1. Default (TypeScript Node.js with static Web)
+1. TypeScript Node.js (Zero web)
+1. Puse JavaScript Node.js (ES6, Zero compile)
 
 ## Installing TSCLI
 
