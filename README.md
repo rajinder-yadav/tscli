@@ -14,6 +14,8 @@ Emphasis is put into encouraging the use of best practices and the best tools. I
 
 Currently the _TSCLI_ default project template is being used to solidify concepts and setup.
 
+TSCLI uses only TypeScript to build the project, I plan to add Webpack support once I am satifisty the basic project templates.
+
 ## Project Types
 
 The following basic project type that can be created using TSCLI are:
@@ -57,7 +59,7 @@ You can also continue to watch and run a Node.js based program during developmen
 * Terminal 2: Run the compiled Node.js code.
 * Terminal 3: Watch test results.
 
-**Important!**: If you're encounter strange build errors in one of the terminal, it could be due to linting errors or compiler error. This unfortunately doesn't make it to the terminal since these operation are running through another NPM script. So to quick see what's failing, from another terminal type, `npm run build`, this will quickly let you see the problem.
+**Important!**: If you are encounter strange build errors in one of the terminal, it could be due to linting errors or compiler error. This unfortunately does not make it to the terminal since these operations are running through another NPM script. So to quickly see what is failing, from another terminal type, `npm run build`, this will quickly let you see the problem.
 
 #### Terminal One
 
@@ -71,7 +73,7 @@ Wait for the build to complete before issuing the next command.
 
 #### Terminal Two
 
-This will run the Node.js whenever new files are copied into the `build/` folder.
+This will run the Node.js program whenever new files are copied into the `build/` folder from the compiler.
 
 ```sh
 npm run devwatch
@@ -79,13 +81,13 @@ npm run devwatch
 
 #### Terminal Three
 
-This runs the unit tests in watch mode.
+This runs the unit tests in watch mode when file in the `build/` folder are updated.
 
 ```sh
 npm run testwatch
 ```
 
-There is a delay added before the Node.js program is executed, this is to prevent premature re-running of code if multiple files are being copied to the `build/` folder. You can change the delay from the `devwatch` script (see file`package.json`) by altering the value passed using the `--delay-start` switch.
+There is a delay added before the Node.js program is executed, this is to prevent premature re-running of code if multiple files are being copied to the `build/` folder. You can change the delay from the `devwatch` script (see file `package.json`) by altering the value passed using the `--delay-start` switch.
 
 ## Benefits
 
@@ -114,7 +116,7 @@ Place all TypeScript source code under the folder, `src/`, they will be picked u
 
 You are free to create addition folders and sub-folders under, `src/`, the compiler will recursively find and compile all TypeScript code.
 
-All TypeScript code in compiled to _ES5_ JavaScript. The target JavaScript code can be changed from the [TypeScript configuration](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file, `tsconfig.json`.
+All TypeScript code is compiled to _ES5_ JavaScript. The target JavaScript code can be changed from the [TypeScript configuration](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file, `tsconfig.json`.
 
 Some of the things you may want to configure:
 
@@ -165,6 +167,8 @@ npm run check
 ```
 
 _Note_: The TypeScript source code is run through a linter (_TSLint_) before a build and before it is committed to the Git repository. Any errors encountered must be fixed before the Git commit is allowed to proceed.
+
+**Important!**: I have noticed, one in a while the git hooks will continue to fail when there is nothing really wrong. If you suspect this is the case, the easy fix is to delete the `node_modules` folder. Follow it with a `npm install` or simply type `yarn` and then try to commit or push the code again.
 
 ### Testing
 
@@ -236,13 +240,13 @@ This will allow including `<script>` assets from the index.html file like this:
 
 ## Test coverage
 
-Test coverage is done when testing is run using `nyc`. The test coverage result is displayed to the console after the results of the unit tests. A folder called `coverage/` will be created under the project root. It will hold the results of the code coverage from the test run. Of interest to you will by the HTML report which is a nice way to see what code was covered and what code was not by the unit tests.
+Test coverage is done when test is run using `nyc`. The test coverage result is displayed to the console after the results of the unit tests. A folder called `coverage/` will be created under the project root. It will hold the results of the code coverage from the test run. Of interest to you will be the HTML report. It is a nice way to see what code was covered and what code was not by the unit tests.
 
 To configure the test coverage, make changes to the `nyc` settings found in the file `package.json`.
 
 ## Create a Node.js JavaScript project
 
-If you want to develop in plain JavaScript, or develop a ES6 Node.js based project, this is now supported. It's also good for quickly testing out code and not getting slowed down by the compile step.
+If you want to develop in plain JavaScript, or develop a ES6 Node.js based project, this is now supported. It is also good for quickly testing out code and not getting slowed down by the compile step.
 
 You will need the latest version of Node.js for ES6 and beyond support, otherwise plain JavaScript will continue to work.
 
