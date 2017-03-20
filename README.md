@@ -202,7 +202,7 @@ This will open a web browser on port 3000, and load the HTML page, `index.html` 
 
 Any changes made to `index.html` will automatically update and browser on save. You do not need to keep hitting _refresh_ on the browser.
 
-The website uses _Browsersync_ to run a local development web-server and keeps all browsers listening to it in sync. This means it is possible to have multiple browsers listening to the server.
+The website uses lite-server, which is based on Browsersync to run a local development web-server and keeps all browsers listening to it in sync. This means it is possible to have multiple browsers listening to the server.
 
 On how to configure the setup, read the [Browsersync options](https://browsersync.io/docs/options).
 
@@ -233,8 +233,6 @@ This will allow including `<script>` assets from the index.html file like this:
 ```html
 <head>
   <link rel="stylesheet" href="./node_modules/tachyons/css/tachyons.min.css">
-  <script src="../node_modules/zone.js/dist/zone.js"></script>
-  <script src="../node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
 </head>
 ```
 
