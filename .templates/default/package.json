@@ -32,9 +32,9 @@
     "test:web": "cross-env NODE_ENV=test browserify \"build/**/*/test.*.js\"|tape-run|tap-summary",
     "tsc": "tsc",
     "web": "run-p webwatch webbrowser",
-    "webbrowser": "browser-sync start --config bs-config.js",
+    "webbrowser": "lite-server start --config bs-config.js",
     "webinit": "shx cp src/index.html build",
-    "webrefresh": "browser-sync reload",
+    "webrefresh": "lite-server reload",
     "webwatch": "gazeall --wait-first --delay 350 --runs-npm \"clean build webinit webrefresh\" \"src/**/*\""
   },
   "keywords": [
@@ -54,13 +54,13 @@
   "devDependencies": {
     "@types/node": "^7.0.8",
     "ava": "^0.18.2",
-    "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "core-js": "^2.4.1",
     "cross-env": "^3.2.4",
     "cross-var": "^1.0.3",
     "gazeall": "^0.2.5",
     "husky": "^0.13.2",
+    "lite-server": "^2.3.0",
     "npm-run-all": "^4.0.2",
     "nyc": "^10.1.2",
     "shx": "^0.2.2",
