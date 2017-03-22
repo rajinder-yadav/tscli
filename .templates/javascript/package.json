@@ -20,8 +20,8 @@
     "prepush": "npm run test",
     "start": "node $npm_package_config_main",
     "test": "npm run ava:coverage",
+    "test:e2e": "nightwatch",
     "testwatch": "gazeall --runs-npm ava \"src/**/*\""
-
   },
   "keywords": [
     "javascript",
@@ -43,6 +43,7 @@
     "gazeall": "^0.2.5",
     "husky": "^0.13.2",
     "jsdocs": "^0.1.0",
+    "nightwatch": "^0.9.14",
     "npm-run-all": "^4.0.2",
     "nyc": "^10.1.2",
     "prettier": "^0.22.0",
