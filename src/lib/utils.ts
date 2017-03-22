@@ -18,18 +18,29 @@ export function goodbye(): string {
  */
 export function downloadFileHttps( uri: string, filename: string, cb: any ): void {
   const file = fs.createWriteStream( filename );
-  /*const request =*/ https.get( uri, function( response ) {
-    response.pipe( file );
-    file.on( "finish", function() {
-      cb();
-    } )
-      .on( "error", function( err: any ) {
-        // Delete the file async, don't check the result.
-        fs.unlink( filename );
-        if ( cb ) {
-          cb( err );
-        }
-      } );
+  file.on( "finish", () => {
+    // Safe to envoke the callback once file io is completed.
+    cb();
+  } )
+    .on( "error", ( err: any ) => {
+      // Delete the file async, don't check the result.
+      fs.unlink( filename );
+      if ( cb ) {
+        cb( err );
+      }
+    } );
+
+  /*const request =*/ https.get( uri, response => {
+    response.on( "aborted", ( err: any ) => {
+      file.emit( "error", err );
+    } );
+
+    const SUCCESS_OK = 200;
+    if ( response.statusCode === SUCCESS_OK ) {
+      response.pipe( file );
+    } else {
+      file.emit( "error", new Error( `Request Failed!\nStatus Code: ${ response.statusCode }` ) );
+    }
   } );
 }
 
@@ -41,17 +52,28 @@ export function downloadFileHttps( uri: string, filename: string, cb: any ): voi
  */
 export function downloadFileHttp( uri: string, filename: string, cb: any ): void {
   const file = fs.createWriteStream( filename );
-  /*const request =*/ http.get( uri, function( response ) {
-    response.pipe( file );
-    file.on( "finish", function() {
-      cb();
-    } )
-      .on( "error", function( err: any ) {
-        // Delete the file async, don't check the result.
-        fs.unlink( filename );
-        if ( cb ) {
-          cb( err );
-        }
-      } );
+  file.on( "finish", () => {
+    // Safe to envoke the callback once file io is completed.
+    cb();
+  } )
+    .on( "error", ( err: any ) => {
+      // Delete the file async, don't check the result.
+      fs.unlink( filename );
+      if ( cb ) {
+        cb( err );
+      }
+    } );
+
+  /*const request =*/ http.get( uri, response => {
+    response.on( "aborted", ( err: any ) => {
+      file.emit( "error", err );
+    } );
+
+    const SUCCESS_OK = 200;
+    if ( response.statusCode === SUCCESS_OK ) {
+      response.pipe( file );
+    } else {
+      file.emit( "error", new Error( `Request Failed!\nStatus Code: ${ response.statusCode }` ) );
+    }
   } );
 }

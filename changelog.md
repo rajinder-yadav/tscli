@@ -2,6 +2,16 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-18 (2017-03-??)
+
+* Added Selenium E2E testing, downloads:
+  * Standalone Selenium server (v3.3.1).
+  * ChromeDriver (v2.28).
+* Switched to using lite-server, needed for Angular.
+* Changed project creation messages.
+* Changed how `undefined` field is tested.
+* README update for lite-server mention.
+
 ## 0.1.2-alpha-17 (2017-03-19)
 
 * Version bump
