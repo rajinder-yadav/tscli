@@ -52,7 +52,7 @@
     "nyc": "^10.1.2",
     "shx": "^0.2.2",
     "tap-summary": "^3.0.1",
-    "tslint": "^4.5.1",
+    "tslint": "^5.0.0",
     "typedoc": "^0.5.7",
     "typescript": "^2.2.1",
     "typescript-formatter": "^5.1.2"
