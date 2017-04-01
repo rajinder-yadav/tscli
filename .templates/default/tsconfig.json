@@ -13,7 +13,8 @@
     "outDir": "./build",
     "removeComments": true,
     "sourceMap": false,
-    "target": "es5"
+    "target": "es5",
+    "lib": ["es6", "dom"]
   },
   "include": [
     "src/**/*"
