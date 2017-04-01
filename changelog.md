@@ -2,6 +2,21 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-18 (2017-04-01)
+
+### E2E Testing
+
+Currently added E2E testing support to the _default_ and _js_ templates. This is experiments added support and may change, or be removed.
+
+* Added Selenium E2E testing, downloads:
+  * Standalone Selenium server (v3.3.1).
+  * ChromeDriver (v2.28).
+* Switched to using lite-server, needed for Angular.
+* Changed project creation messages.
+* Changed how `undefined` field is tested.
+* README update for lite-server mention and Web development.
+* Added Web development support.
+
 ## 0.1.2-alpha-17 (2017-03-19)
 
 * Version bump

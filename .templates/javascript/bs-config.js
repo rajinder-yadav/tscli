@@ -1,4 +1,3 @@
-
 /*
  |--------------------------------------------------------------------------
  | Browser-sync config file
@@ -29,7 +28,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": {
-      baseDir: "build",
+      baseDir: "src/",
       routes: {
         "/node_modules/tachyons/css":"node_modules/tachyons/css",
         "/node_modules/material-design-lite": "node_modules/material-design-lite"

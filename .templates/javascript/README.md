@@ -110,3 +110,51 @@ npm test
 Test coverage is done when testing is run using `nyc`. The test coverage result is displayed to the console after the results of the unit tests. A folder called `coverage/` will be created under the project root. It will hold the results of the code coverage from the test run. Of interest to you will by the HTML report which is a nice way to see what code was covered and what code was not by the unit tests.
 
 To configure the test coverage, make changes to the `nyc` settings found in the file `package.json`.
+
+## Static Web development
+
+If you want to hack around with HTML, CSS and try things out quick. Start the project in _web_ mode using the following command:
+
+```sh
+npm run web
+```
+
+This will open a web browser on port 3000, and load the HTML page, `index.html` located in the `src/` sub-folder.
+
+Any changes made to `index.html` will automatically update and browser on save. You do not need to keep hitting _refresh_ on the browser.
+
+The website uses _Browsersync_ to run a local development web-server and keeps all browsers listening to it in sync. This means it is possible to have multiple browsers listening to the server.
+
+On how to configure the setup, read the [Browsersync options](https://browsersync.io/docs/options).
+
+Basic configurations setting you may be interested in are:
+
+* files
+* server
+* proxy
+* logLevel
+* port
+
+The default Browsersync UI web address is: `http://localhost:3001/`.
+
+### Browsersync Asset fetching
+
+With Browsersync, having to serve addition CSS and JavaScript files, make sure to add their path in routes. Something similar to like this:
+
+```js
+  "server": {
+    baseDir: "src",
+    routes: {
+      "/node_modules/tachyons/css":"node_modules/tachyons/css"
+    }
+```
+
+This will allow including `<script>` assets from the index.html file like this:
+
+```html
+<head>
+  <link rel="stylesheet" href="./node_modules/tachyons/css/tachyons.min.css">
+  <script src="../node_modules/zone.js/dist/zone.js"></script>
+  <script src="../node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
+</head>
+```

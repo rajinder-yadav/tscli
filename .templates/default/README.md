@@ -137,6 +137,13 @@ npm test
 
 _Note_: Running the test will cause a fresh build to be kicked-off. Once the build finishes, all the unit tests will be run.
 
+
+## Test coverage
+
+Test coverage is done when testing is run using `nyc`. The test coverage result is displayed to the console after the results of the unit tests. A folder called `coverage/` will be created under the project root. It will hold the results of the code coverage from the test run. Of interest to you will by the HTML report which is a nice way to see what code was covered and what code was not by the unit tests.
+
+To configure the test coverage, make changes to the `nyc` settings found in the file `package.json`.
+
 ## Static Web development
 
 If you want to hack around with HTML, CSS and try things out quick. Start the project in _web_ mode using the following command:
@@ -184,12 +191,6 @@ This will allow including `<script>` assets from the index.html file like this:
   <script src="../node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
 </head>
 ```
-
-## Test coverage
-
-Test coverage is done when testing is run using `nyc`. The test coverage result is displayed to the console after the results of the unit tests. A folder called `coverage/` will be created under the project root. It will hold the results of the code coverage from the test run. Of interest to you will by the HTML report which is a nice way to see what code was covered and what code was not by the unit tests.
-
-To configure the test coverage, make changes to the `nyc` settings found in the file `package.json`.
 
 ## Coding guideline
 
