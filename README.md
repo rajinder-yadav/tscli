@@ -273,6 +273,19 @@ The plain JavaScript generated file has a development mode. It will run the _Ent
 npm run dev
 ```
 
+### TypeScript Node ES5
+
+If you need to use ES5 Nodejs support with TypeScript here are the following change you need to make.
+
+Add the following two lines under compilerOptions to `tsconfig.json` and `tsconfig.test.json`.
+
+```js
+"compilerOptions": {
+  "target": "es5",
+  "lib": ["es2015", "dom"]
+}
+```
+
 ## Contributors wanted
 
 I am open to help and learn from the community. Feel free to create a PR, reach out to me to discuss ideas, and help out with this project.
