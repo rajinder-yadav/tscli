@@ -47,21 +47,21 @@ function createNewProject(cmd, options) {
     else {
         sh.exec("npm install");
     }
-    if (cmd.type === "js") {
-        sh.mkdir("bin");
-        utils.downloadFileHttps("https://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip", "./bin/chromedriver_linux64.zip", function (err) {
+    if (cmd.type === undefined || cmd.type === "default" || cmd.type === "js") {
+        sh.mkdir("bin_tools");
+        utils.downloadFileHttps("https://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip", "./bin_tools/chromedriver_linux64.zip", function (err) {
             if (err) {
                 console.log(err.message);
             }
             else {
                 console.log("Downloaded Chromedriver.");
-                sh.pushd(`${options.project}/bin`);
+                sh.pushd(`${options.project}/bin_tools`);
                 sh.exec("unzip chromedriver_linux64.zip");
                 sh.rm("chromedriver_linux64.zip");
                 sh.popd();
             }
         });
-        utils.downloadFileHttp("http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar", "./bin/selenium-server-standalone-3.3.1.jar", function (err) {
+        utils.downloadFileHttp("http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar", "./bin_tools/selenium-server-standalone-3.3.1.jar", function (err) {
             if (err) {
                 console.log(err.message);
             }

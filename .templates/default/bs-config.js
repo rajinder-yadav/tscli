@@ -31,7 +31,8 @@ module.exports = {
     "server": {
       baseDir: "build",
       routes: {
-        "/node_modules/tachyons/css":"node_modules/tachyons/css"
+        "/node_modules/tachyons/css":"node_modules/tachyons/css",
+        "/node_modules/material-design-lite": "node_modules/material-design-lite"
       }
     },
     "proxy": false,

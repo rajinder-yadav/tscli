@@ -53,18 +53,18 @@ export function createNewProject( cmd: any, options: any ): void {
   }
 
   // Set up end to end testing.
-  if ( cmd.type === "js" ) {
-    sh.mkdir( "bin" );
+  if ( cmd.type === undefined || cmd.type === "default" || cmd.type === "js" ) {
+    sh.mkdir( "bin_tools" );
 
     // Download Chromedriver.
     utils.downloadFileHttps( "https://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip",
-      "./bin/chromedriver_linux64.zip",
+      "./bin_tools/chromedriver_linux64.zip",
       function( err: any ) {
         if ( err ) {
           console.log( err.message );
         } else {
           console.log( "Downloaded Chromedriver." );
-          sh.pushd( `${ options.project }/bin` );
+          sh.pushd( `${ options.project }/bin_tools` );
           sh.exec( "unzip chromedriver_linux64.zip" );
           sh.rm( "chromedriver_linux64.zip" );
           sh.popd();
@@ -73,7 +73,7 @@ export function createNewProject( cmd: any, options: any ): void {
 
     // Download standalone selenium-server.
     utils.downloadFileHttp( "http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar",
-      "./bin/selenium-server-standalone-3.3.1.jar",
+      "./bin_tools/selenium-server-standalone-3.3.1.jar",
       function( err: any ) {
         if ( err ) {
           console.log( err.message );

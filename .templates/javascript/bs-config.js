@@ -30,7 +30,8 @@ module.exports = {
     "server": {
       baseDir: "src/",
       routes: {
-        "/node_modules/tachyons/css":"node_modules/tachyons/css"
+        "/node_modules/tachyons/css":"node_modules/tachyons/css",
+        "/node_modules/material-design-lite": "node_modules/material-design-lite"
       }
     },
     "proxy": false,
