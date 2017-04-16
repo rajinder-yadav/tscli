@@ -13,7 +13,8 @@
     "outDir": "./build",
     "removeComments": true,
     "inlineSourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "lib": ["es2015", "dom"]
   },
   "include": [
     "src/**/*"

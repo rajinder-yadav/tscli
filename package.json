@@ -54,7 +54,7 @@
     "tap-summary": "^3.0.1",
     "tslint": "^5.0.0",
     "typedoc": "^0.5.7",
-    "typescript": "^2.2.1",
+    "typescript": "^2.3.0",
     "typescript-formatter": "^5.1.2"
   },
   "dependencies": {

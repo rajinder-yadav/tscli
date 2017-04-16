@@ -12,9 +12,9 @@
     "noUnusedParameters": true,
     "outDir": "./build",
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "target": "es5",
-    "lib": ["es6", "dom"]
+    "lib": ["es2015", "dom"]
   },
   "include": [
     "src/**/*"

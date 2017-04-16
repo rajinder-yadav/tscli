@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sh = require("shelljs");
 const path = require("path");
 const fs = require("fs");
-const utils = require("../lib/utils");
 const data_types_1 = require("../data-types/data-types");
 const commit_message = `
 This Project was generated using TSCLI (${data_types_1.VERSION}).
@@ -46,29 +45,6 @@ function createNewProject(cmd, options) {
     }
     else {
         sh.exec("npm install");
-    }
-    if (cmd.type === undefined || cmd.type === "default" || cmd.type === "js") {
-        sh.mkdir("bin_tools");
-        utils.downloadFileHttps("https://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip", "./bin_tools/chromedriver_linux64.zip", function (err) {
-            if (err) {
-                console.log(err.message);
-            }
-            else {
-                console.log("Downloaded Chromedriver.");
-                sh.pushd(`${options.project}/bin_tools`);
-                sh.exec("unzip chromedriver_linux64.zip");
-                sh.rm("chromedriver_linux64.zip");
-                sh.popd();
-            }
-        });
-        utils.downloadFileHttp("http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar", "./bin_tools/selenium-server-standalone-3.3.1.jar", function (err) {
-            if (err) {
-                console.log(err.message);
-            }
-            else {
-                console.log("Downloaded Selenium server.");
-            }
-        });
     }
     sh.popd();
     console.log(`Project ${options.project} created successfully.`);
