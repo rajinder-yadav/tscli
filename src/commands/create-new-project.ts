@@ -1,7 +1,7 @@
 import * as sh from "shelljs";
 import * as path from "path";
 import * as fs from "fs";
-import * as utils from "../lib/utils";
+// import * as utils from "../lib/utils";
 
 import { VERSION, YARN } from "../data-types/data-types";
 
@@ -52,6 +52,9 @@ export function createNewProject( cmd: any, options: any ): void {
     sh.exec( "npm install" );
   }
 
+  /* Good idea, need more thought as it is a maintanance burden to keep up with version changes.
+  // Also need to take into consideration different platforms: Win, MacOS, Linux 32/64.
+
   // Set up end to end testing.
   if ( cmd.type === undefined || cmd.type === "default" || cmd.type === "js" ) {
     sh.mkdir( "bin_tools" );
@@ -82,6 +85,7 @@ export function createNewProject( cmd: any, options: any ): void {
         }
       } );
   }
+  */
 
   sh.popd();
   console.log( `Project ${ options.project } created successfully.` );
