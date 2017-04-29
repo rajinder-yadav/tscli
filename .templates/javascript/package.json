@@ -49,10 +49,10 @@
     "lite-server": "^2.3.0",
     "nightwatch": "^0.9.14",
     "npm-run-all": "^4.0.2",
-    "nyc": "^10.2.0",
-    "prettier": "^1.0.2",
+    "nyc": "^10.3.0",
+    "prettier": "^1.2.2",
     "shx": "^0.2.2",
-    "tachyons": "^4.7.0",
+    "tachyons": "^4.7.1",
     "tap-summary": "^3.0.2"
   },
   "dependencies": {
