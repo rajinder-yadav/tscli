@@ -1,19 +1,64 @@
 {
   "compilerOptions": {
+    /* Generates corresponding '.d.ts' file. */
     "declaration": true,
+    /* Output directory for .d.ts files */
     "declarationDir": "./build",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+     /* Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'. */
     "module": "commonjs",
+    /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
+    "target": "es6",
+    /* Specify library files to be included in the compilation:  */
+    // "lib": ["es2015", "dom"],
+    /* Unix style end of line */
     "newLine": "LF",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
+
+    /* Enable strict TypeScript checking */
+    // "strict": true,
+    /* Raise error on expressions and declarations with an implied 'any' type. */
+    // "noImplicitAny": true,
+    /* Enable strict null checks. */
+    // "strictNullChecks": true,
+    /* Raise error on 'this' expressions with an implied 'any' type. */
+    // "noImplicitThis": true,
+    /* Parse in strict mode and emit "use strict" for each source file. */
+    // "alwaysStrict": true,
+
+    /* Report errors on unused locals. */
     "noUnusedLocals": true,
+    /* Report errors on unused parameters. */
     "noUnusedParameters": true,
+    /* Report error when not all code paths in function return a value. */
+    "noImplicitReturns": true,
+    /* Report errors for fallthrough cases in switch statement. */
+    "noFallthroughCasesInSwitch": true,
+    /* Do not generate code on error */
+    "noEmitOnError": true,
+    /* Redirect output structure to the directory. */
     "outDir": "./build",
-    "removeComments": true,
-    "inlineSourceMap": true,
-    "target": "es6"
+    /* Redirect output structure to the directory. */
+    // "removeComments": true,
+
+    /* Source map */
+    /* Generates corresponding '.map' file. */
+    // "sourceMap": true
+    /* Specify the location where debugger should locate TypeScript files instead of source locations. */
+    // "sourceRoot": "./",
+    /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "mapRoot": "./",
+    /* Emit a single file with source maps instead of having a separate file. */
+    "inlineSourceMap": true
+    /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
+    // "inlineSources": true,
+
+    /* Allow javascript files to be compiled. */
+    // "allowJs": true,
+    /* Report errors in .js files. */
+    // "checkJs": true,
+    /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    // "jsx": "preserve",
   },
   "include": [
     "src/**/*"
@@ -28,3 +73,4 @@
     "test/**/*"
   ]
 }
+
