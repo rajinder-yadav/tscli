@@ -3,10 +3,19 @@
 
 <head>
   <title>TSCLI Test Web page.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Tachyons uses Normalize to reset basic DOM CSS settings -->
   <link rel="stylesheet" href="/node_modules/tachyons/css/tachyons.min.css">
   <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
-  <script src="/node_modules/material-design-lite/material.min.js"></script>
+
+  <!-- Bootstrap 4 CSS -->
+  <!-- Bootstrap use Normalize then has own reboot.css to reset basic DOM CSS settings -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -15,6 +24,9 @@
   <div class="ma2 f4 mid-gray">
     Welcome to developing in TypeScript.
   </div>
+
+  <!-- Load all js files at the end to speed up page rendering -->
+  <script src="/node_modules/material-design-lite/material.min.js"></script>
 </body>
 
 </html>
