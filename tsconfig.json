@@ -18,7 +18,7 @@
     /* Enable strict TypeScript checking */
     "strict": true,
     /* Raise error on expressions and declarations with an implied 'any' type. */
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     /* Enable strict null checks. */
     "strictNullChecks": true,
     /* Raise error on 'this' expressions with an implied 'any' type. */
