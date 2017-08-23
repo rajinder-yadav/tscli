@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=prod tsc",
     "build:test": "cross-env NODE_ENV=test tsc -p ./tsconfig.test.json",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
-    "clean": "shx rm -rf bin && shx rm -rf bin",
+    "clean": "shx rm -rf bin",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_bin_cli",
@@ -42,8 +42,8 @@
     "url": "https://github.com/rajinder-yadav/tscli"
   },
   "devDependencies": {
-    "@types/commander": "^2.9.1",
-    "@types/node": "^7.0.29",
+    "@types/commander": "^2.9.2",
+    "@types/node": "^7.0.42",
     "ava": "^0.19.1",
     "cross-env": "^4.0.0",
     "cross-var": "^1.0.3",
@@ -52,13 +52,13 @@
     "nyc": "^10.3.2",
     "shx": "^0.2.2",
     "tap-summary": "^3.0.2",
-    "tslint": "^5.4.3",
+    "tslint": "^5.6.0",
     "typedoc": "^0.5.10",
-    "typescript": "^2.3.4",
+    "typescript": "^2.5.1",
     "typescript-formatter": "^5.2.0"
   },
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^2.11.0",
     "shelljs": "^0.7.8"
   },
   "nyc": {
