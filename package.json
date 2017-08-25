@@ -51,7 +51,7 @@
     "npm-run-all": "^4.0.2",
     "nyc": "^10.3.2",
     "shx": "^0.2.2",
-    "tap-summary": "^3.0.2",
+    "tap-summary": "^4.0.0",
     "tslint": "^5.4.3",
     "typedoc": "^0.5.10",
     "typescript": "^2.3.4",
