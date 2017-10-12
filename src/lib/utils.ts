@@ -24,7 +24,7 @@ export function downloadFileHttps( uri: any, filename: string, cb: any ): void {
   } )
     .on( "error", ( err: any ) => {
       // Delete the file async, don't check the result.
-      fs.unlink( filename );
+      fs.unlinkSync( filename );
       if ( cb ) {
         cb( err );
       }
@@ -58,7 +58,7 @@ export function downloadFileHttp( uri: string, filename: string, cb: any ): void
   } )
     .on( "error", ( err: any ) => {
       // Delete the file async, don't check the result.
-      fs.unlink( filename );
+      fs.unlinkSync( filename );
       if ( cb ) {
         cb( err );
       }

@@ -42,20 +42,21 @@
     "url": "https://github.com/rajinder-yadav/tscli"
   },
   "devDependencies": {
-    "@types/commander": "^2.9.2",
-    "@types/node": "^7.0.43",
-    "ava": "^0.19.1",
-    "cross-env": "^4.0.0",
-    "cross-var": "^1.0.3",
-    "husky": "^0.13.4",
+    "@types/commander": "^2.11.0",
+    "@types/node": "^8.0.34",
+    "@types/shelljs": "^0.7.4",
+    "ava": "^0.22.0",
+    "cross-env": "^5.0.5",
+    "cross-var": "^1.1.0",
+    "husky": "^0.14.3",
     "npm-run-all": "^4.1.1",
-    "nyc": "^10.3.2",
+    "nyc": "^11.2.1",
     "shx": "^0.2.2",
-    "tap-summary": "^3.0.2",
+    "tap-summary": "^4.0.0",
     "tslint": "^5.7.0",
-    "typedoc": "^0.5.10",
-    "typescript": "^2.5.2",
-    "typescript-formatter": "^5.2.0"
+    "typedoc": "^0.9.0",
+    "typescript": "^2.5.3",
+    "typescript-formatter": "^6.0.0"
   },
   "dependencies": {
     "commander": "^2.11.0",
