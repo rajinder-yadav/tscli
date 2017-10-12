@@ -152,7 +152,7 @@ If you want to hack around with HTML, CSS and try things out quick. Start the pr
 npm run web
 ```
 
-This will open a web browser on port 3000, and load the HTML page, `index.html` located in the `src/` sub-folder.
+This will run the build first and then open a web browser on port 3000, and load the HTML page, `index.html` located in the `src/` sub-folder.
 
 Any changes made to `index.html` will automatically update and browser on save. You do not need to keep hitting _refresh_ on the browser.
 

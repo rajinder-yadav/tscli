@@ -16,7 +16,7 @@ export function goodbye(): string {
  * @param cb {any} - Callback function.
  * @return {void}
  */
-export function downloadFileHttps( uri: string, filename: string, cb: any ): void {
+export function downloadFileHttps( uri: any, filename: string, cb: any ): void {
   const file = fs.createWriteStream( filename );
   file.on( "finish", () => {
     // Safe to envoke the callback once file io is completed.
@@ -24,7 +24,7 @@ export function downloadFileHttps( uri: string, filename: string, cb: any ): voi
   } )
     .on( "error", ( err: any ) => {
       // Delete the file async, don't check the result.
-      fs.unlink( filename );
+      fs.unlinkSync( filename );
       if ( cb ) {
         cb( err );
       }
@@ -58,7 +58,7 @@ export function downloadFileHttp( uri: string, filename: string, cb: any ): void
   } )
     .on( "error", ( err: any ) => {
       // Delete the file async, don't check the result.
-      fs.unlink( filename );
+      fs.unlinkSync( filename );
       if ( cb ) {
         cb( err );
       }

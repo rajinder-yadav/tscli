@@ -70,7 +70,7 @@ module.exports = {
     "reloadDebounce": 0,
     "reloadThrottle": 0,
     "plugins": [],
-    "injectChanges": true,
+    "injectChanges": false,
     "startPath": null,
     "minify": true,
     "host": null,

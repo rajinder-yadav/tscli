@@ -11,7 +11,7 @@ cmd
   .usage( "<command> <project> [options...]" )
   .arguments( "<command> <project>" )
   .option( "-t, --type <type>", "Project types: {default|node|js}" )
-  .action(( command: string, project: string ) => {
+  .action( ( command: string, project: string ) => {
     Object.assign( options, { command, project } );
   } )
   .parse( process.argv );

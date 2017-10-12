@@ -44,16 +44,16 @@
     "url": "https://github.com/<github-user-id>/<project-name>"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.41",
-    "@types/node": "^7.0.29",
-    "ava": "^0.19.1",
+    "@types/core-js": "^0.9.43",
+    "@types/node": "^8.0.26",
+    "ava": "^0.22.0",
     "browserify": "^14.4.0",
     "core-js": "^2.4.1",
     "cross-env": "^4.0.0",
     "cross-var": "^1.0.3",
     "gazeall": "^0.2.5",
     "husky": "^0.13.4",
-    "lite-server": "^2.3.0",
+    "browser-sync": "^2.3.0",
     "nightwatch": "^0.9.15",
     "npm-run-all": "^4.0.2",
     "nyc": "^10.3.2",
@@ -62,12 +62,12 @@
     "tap-summary": "^3.0.2",
     "tape-run": "^3.0.0",
     "tslint": "^5.4.3",
-    "typedoc": "^0.5.10",
-    "typescript": "^2.3.4",
-    "typescript-formatter": "^5.2.0"
+    "typedoc": "^0.8.0",
+    "typescript": "^2.5.2",
+    "typescript-formatter": "^6.0.0"
   },
   "dependencies": {
-    "bunyan": "^1.8.10",
+    "bunyan": "^1.8.12",
     "material-design-lite": "^1.3.0"
   },
   "nyc": {

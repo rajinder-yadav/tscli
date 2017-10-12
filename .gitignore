@@ -1,6 +1,6 @@
 build/
 dist/
-docs/typedoc/
+docs/project/
 img/svg/
 log/
 node_modules/

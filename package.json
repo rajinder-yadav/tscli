@@ -1,6 +1,6 @@
 {
   "name": "tscli",
-  "version": "0.1.2-alpha.19",
+  "version": "0.1.2-alpha.21.01",
   "description": "TypeScript CLI project generator",
   "main": "src/main.ts",
   "bin": {
@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=prod tsc",
     "build:test": "cross-env NODE_ENV=test tsc -p ./tsconfig.test.json",
     "check": "tslint -t codeFrame \"src/**/*.ts\"",
-    "clean": "shx rm -rf bin && shx rm -rf bin",
+    "clean": "shx rm -rf bin",
     "doc": "typedoc --module commonjs --target ES5 --ignoreCompilerErrors --exclude node_modules --out $npm_package_config_doc_folder src",
     "format": "tsfmt -r --baseDir ./",
     "node:debug": "node --inspect --debug-brk $npm_package_bin_cli",
@@ -42,23 +42,24 @@
     "url": "https://github.com/rajinder-yadav/tscli"
   },
   "devDependencies": {
-    "@types/commander": "^2.9.1",
-    "@types/node": "^7.0.29",
-    "ava": "^0.19.1",
-    "cross-env": "^4.0.0",
-    "cross-var": "^1.0.3",
-    "husky": "^0.13.4",
-    "npm-run-all": "^4.0.2",
-    "nyc": "^10.3.2",
+    "@types/commander": "^2.11.0",
+    "@types/node": "^8.0.34",
+    "@types/shelljs": "^0.7.4",
+    "ava": "^0.22.0",
+    "cross-env": "^5.0.5",
+    "cross-var": "^1.1.0",
+    "husky": "^0.14.3",
+    "npm-run-all": "^4.1.1",
+    "nyc": "^11.2.1",
     "shx": "^0.2.2",
-    "tap-summary": "^3.0.2",
-    "tslint": "^5.4.3",
-    "typedoc": "^0.5.10",
-    "typescript": "^2.3.4",
-    "typescript-formatter": "^5.2.0"
+    "tap-summary": "^4.0.0",
+    "tslint": "^5.7.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.5.3",
+    "typescript-formatter": "^6.0.0"
   },
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^2.11.0",
     "shelljs": "^0.7.8"
   },
   "nyc": {

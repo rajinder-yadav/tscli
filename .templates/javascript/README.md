@@ -158,3 +158,15 @@ This will allow including `<script>` assets from the index.html file like this:
   <script src="../node_modules/zone.js/dist/long-stack-trace-zone.js"></script>
 </head>
 ```
+
+## Document generation
+
+Docs can be generated using the following command.
+
+```sh
+npm run doc
+```
+
+[ESDoc](https://esdoc.org/) is used to generate the docs, for more info see the main site.
+
+* [Writting tags](https://esdoc.org/manual/tags.html)
