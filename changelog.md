@@ -2,6 +2,17 @@
 
 All changes to this project will be recorded in this document.
 
+## 0.1.2-alpha-201 (2017-10-??)
+
+* For JavaScript project now using ESDoc.
+* Bootstrap 4.
+
+## 0.1.2-alpha-20 (2017-08-23)
+
+* Boostrap 4 beta.
+* Relaxing linting rule to allow build success.
+* NPM package update.
+
 ## 0.1.2-alpha-19 (2017-04-29)
 
 * Updated TypeScript rules (project, default, node).

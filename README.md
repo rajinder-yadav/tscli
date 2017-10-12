@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.19-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.20-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
@@ -198,7 +198,7 @@ If you want to hack around with HTML, CSS and try things out quick. Start the pr
 npm run web
 ```
 
-This will open a web browser on port 3000, and load the HTML page, `index.html` located in the `src/` sub-folder.
+This will run the build first and then open a web browser on port 3000, and load the HTML page, `index.html` located in the `src/` sub-folder.
 
 Any changes made to `index.html` will automatically update and browser on save. You do not need to keep hitting _refresh_ on the browser.
 

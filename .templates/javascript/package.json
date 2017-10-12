@@ -4,25 +4,24 @@
   "description": "TypeScript CLI generated demo project",
   "main": "src/main.ts",
   "config": {
-    "main": "src/main.js",
-    "doc_folder": "docs/jsdoc"
+    "main": "src/main.js"
   },
   "scripts": {
     "ava": "ava --tap \"src/**/*/test.*.js\"|tap-summary",
     "ava:coverage": "nyc ava --tap \"src/**/*/test.*.js\"|tap-summary",
     "check": "eslint \"src/**/*.js\"",
     "devwatch": "gazeall --run \"node src/main.js\" \"src/**/*\"",
-    "doc": "jsdocs src $npm_package_config_doc_folder",
+    "doc": "esdoc",
     "format": "prettier --write \"src/**/*.js\"",
     "node:debug": "node --inspect --debug-brk $npm_package_config_main",
     "precommit": "run-s format check",
-    "predoc": "shx rm -rf $npm_package_config_doc_folder && shx mkdir -p $npm_package_config_doc_folder",
+    "predoc": "shx rm -rf ./docs/project && shx mkdir -p ./docs/project",
     "prepush": "npm run test",
     "start": "node $npm_package_config_main",
     "test": "npm run ava:coverage",
     "test:e2e": "nightwatch",
     "testwatch": "gazeall --runs-npm ava \"src/**/*\"",
-    "web": "lite-server start --config bs-config.js"
+    "web": "browser-sync start --config bs-config.js"
   },
   "keywords": [
     "javascript",
@@ -38,25 +37,26 @@
     "url": "https://github.com/<github-user-id>/<project-name>"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
-    "core-js": "^2.4.1",
-    "cross-env": "^4.0.0",
+    "ava": "^0.22.0",
+    "browser-sync": "^2.3.0",
+    "core-js": "^2.5.1",
+    "cross-env": "^5.0.5",
     "cross-var": "^1.0.3",
-    "eslint": "^3.19.0",
+    "esdoc": "^1.0.3",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^4.6.0",
     "gazeall": "^0.2.5",
-    "husky": "^0.13.4",
-    "jsdocs": "^0.1.0",
-    "lite-server": "^2.3.0",
-    "nightwatch": "^0.9.15",
-    "npm-run-all": "^4.0.2",
-    "nyc": "^10.3.2",
-    "prettier": "^1.4.4",
+    "husky": "^0.14.3",
+    "nightwatch": "^0.9.16",
+    "npm-run-all": "^4.1.1",
+    "nyc": "^11.0.1",
+    "prettier": "^1.6.1",
     "shx": "^0.2.2",
-    "tachyons": "^4.7.4",
-    "tap-summary": "^3.0.2"
+    "tachyons": "^4.8.1",
+    "tap-summary": "^4.0.0"
   },
   "dependencies": {
-    "bunyan": "^1.8.10",
+    "bunyan": "^1.8.12",
     "material-design-lite": "^1.3.0"
   },
   "nyc": {

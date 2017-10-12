@@ -22,8 +22,8 @@ function createNewProject(cmd, options) {
         console.log(`Folder ${options.project} already exists!`);
         return;
     }
-    if (cmd.type === undefined || cmd.type === "default") {
-        console.log("TSCLI is generating a new default project...");
+    if (cmd.type === undefined || cmd.type === "ts" || cmd.type === "default") {
+        console.log("TSCLI is generating a new default TypeScript project...");
         sh.cp("-r", path.resolve(__dirname, "../../.templates/default/"), `${options.project}`);
     }
     else if (cmd.type === "node") {

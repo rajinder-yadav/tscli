@@ -16,7 +16,7 @@ export function goodbye(): string {
  * @param cb {any} - Callback function.
  * @return {void}
  */
-export function downloadFileHttps( uri: string, filename: string, cb: any ): void {
+export function downloadFileHttps( uri: any, filename: string, cb: any ): void {
   const file = fs.createWriteStream( filename );
   file.on( "finish", () => {
     // Safe to envoke the callback once file io is completed.
