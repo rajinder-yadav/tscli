@@ -1,6 +1,6 @@
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
-![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.20-blue.svg)
+![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.21-blue.svg)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
 [![Greenkeeper badge](https://badges.greenkeeper.io/rajinder-yadav/tscli.svg)](https://greenkeeper.io/)
 
@@ -20,9 +20,9 @@ TSCLI uses only TypeScript to build the project, I plan to add Webpack support o
 
 The following basic project type that can be created using TSCLI are:
 
-1. Default (TypeScript Node.js with static Web)
+1. Default (TypeScript Node.js with static Website)
 1. TypeScript Node.js (Zero web)
-1. Puse JavaScript Node.js (ES6, Zero compile)
+1. Puse JavaScript Node.js (ES6, Zero compile wth static Website)
 
 ## Installing TSCLI
 
