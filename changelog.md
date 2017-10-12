@@ -6,6 +6,12 @@ All changes to this project will be recorded in this document.
 
 * For JavaScript project now using ESDoc.
 * Bootstrap 4.
+* Switched to using BrowserSync.
+* NPM Module updated.
+* Separated logged code to its own module.
+* Default template now builds to ES2017.
+* TS format config updated.
+* New switch `ts` added to cli.
 
 ## 0.1.2-alpha-20 (2017-08-23)
 
