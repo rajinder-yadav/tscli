@@ -1,3 +1,5 @@
-## This project has been renamed
+# TSCLI
 
-Please switch now to [Dev Mentor Tools](https://github.com/devmentor416/devmentor)
+## This project has been renamed to DM-Tools.
+
+Please switch over to using [DM-Tools](https://www.npmjs.com/package/dm-tools)

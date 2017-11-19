@@ -3,13 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const https = require("https");
 const http = require("http");
 const fs = require("fs");
-exports.hello = () => {
+exports.stub_test = () => {
     return "Hello TSCLI!";
 };
-function goodbye() {
-    return "See you later =)";
-}
-exports.goodbye = goodbye;
 function downloadFileHttps(uri, filename, cb) {
     const file = fs.createWriteStream(filename);
     file.on("finish", () => {
