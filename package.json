@@ -1,6 +1,6 @@
 {
   "name": "tscli",
-  "version": "0.1.2-alpha.21.02",
+  "version": "0.1.2-alpha.21.03",
   "description": "TypeScript CLI project generator",
   "main": "src/main.ts",
   "bin": {
