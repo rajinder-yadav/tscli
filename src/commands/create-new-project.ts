@@ -1,7 +1,7 @@
 import * as sh from "shelljs";
 import * as path from "path";
 import * as fs from "fs";
-// import * as utils from "../lib/utils";
+import * as utils from "../lib/utils";
 
 import { VERSION, YARN } from "../data-types/data-types";
 
@@ -52,31 +52,30 @@ export function createNewProject( cmd: any, options: any ): void {
     sh.exec( "npm install" );
   }
 
-  /* Good idea, need more thought as it is a maintanance burden to keep up with version changes.
   // Also need to take into consideration different platforms: Win, MacOS, Linux 32/64.
 
   // Set up end to end testing.
-  if ( cmd.type === undefined || cmd.type === "default" || cmd.type === "js" ) {
+  if ( !cmd.e2e ) {
     sh.mkdir( "bin_tools" );
 
     // Download Chromedriver.
-    utils.downloadFileHttps( "https://chromedriver.storage.googleapis.com/2.28/chromedriver_linux64.zip",
-      "./bin_tools/chromedriver_linux64.zip",
+    utils.downloadFileHttps( "https://chromedriver.storage.googleapis.com/2.33/chromedriver_mac64.zip",
+      "./bin_tools/chromedriver_mac64.zip",
       function( err: any ) {
         if ( err ) {
           console.log( err.message );
         } else {
           console.log( "Downloaded Chromedriver." );
           sh.pushd( `${ options.project }/bin_tools` );
-          sh.exec( "unzip chromedriver_linux64.zip" );
-          sh.rm( "chromedriver_linux64.zip" );
+          sh.exec( "unzip chromedriver_mac64.zip" );
+          sh.rm( "chromedriver_mac64.zip" );
           sh.popd();
         }
       } );
 
     // Download standalone selenium-server.
-    utils.downloadFileHttp( "http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar",
-      "./bin_tools/selenium-server-standalone-3.3.1.jar",
+    utils.downloadFileHttp( "http://selenium-release.storage.googleapis.com/3.7/selenium-server-standalone-3.7.1.jar",
+      "./bin_tools/selenium-server-standalone-3.7.1.jar",
       function( err: any ) {
         if ( err ) {
           console.log( err.message );
@@ -85,7 +84,6 @@ export function createNewProject( cmd: any, options: any ): void {
         }
       } );
   }
-  */
 
   sh.popd();
   console.log( `Project ${ options.project } created successfully.` );

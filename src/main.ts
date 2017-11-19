@@ -11,6 +11,8 @@ cmd
   .usage( "<command> <project> [options...]" )
   .arguments( "<command> <project>" )
   .option( "-t, --type <type>", "Project types: {default|node|js}" )
+  .option( "--e2e", "End to end testing" )
+  .option( "-w, --web", "Simple static Web setup" )
   .action( ( command: string, project: string ) => {
     Object.assign( options, { command, project } );
   } )
