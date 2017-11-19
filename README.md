@@ -1,3 +1,3 @@
-# This project has been renamed, please switch to using DM-Tools below.
+## This project has been renamed
 
-- [Dev Mentor Tools](https://github.com/devmentor416/devmentor)
+Please switch now to [Dev Mentor Tools](https://github.com/devmentor416/devmentor)
