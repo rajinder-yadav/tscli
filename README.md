@@ -1,3 +1,8 @@
+## This project has been renamed, please switch to using DM-Tools below.
+
+- [Dev Mentor Tools](https://github.com/devmentor416/devmentor)
+
+
 ![Travis](https://img.shields.io/travis/rajinder-yadav/tscli.svg)
 ![Dependencies](https://david-dm.org/rajinder-yadav/tscli.svg)
 ![Version](https://img.shields.io/badge/TSCLI-0.1.2--alpha.21-blue.svg)
