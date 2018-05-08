@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "commander": "^2.11.0",
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.8.2"
   },
   "nyc": {
     "lines": 10,
