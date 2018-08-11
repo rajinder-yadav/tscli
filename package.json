@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@types/commander": "^2.11.0",
-    "@types/node": "^8.0.34",
+    "@types/node": "^10.5.8",
     "@types/shelljs": "^0.7.4",
     "ava": "^0.23.0",
     "cross-env": "^5.0.5",
