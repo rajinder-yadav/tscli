@@ -54,7 +54,7 @@
     "shx": "^0.2.2",
     "tap-summary": "^4.0.0",
     "tslint": "^5.7.0",
-    "typedoc": "^0.9.0",
+    "typedoc": "^0.15.6",
     "typescript": "^2.5.3",
     "typescript-formatter": "^7.0.0"
   },
