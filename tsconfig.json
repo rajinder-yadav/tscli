@@ -7,11 +7,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
      /* Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'. */
-    "module": "commonjs",
+    "module": "NodeNext",
     /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
-    "target": "es6",
+    "target": "es2022",
     /* Specify library files to be included in the compilation:  */
-    // "lib": ["es2015", "dom"],
+    "lib": ["es2023", "es2015", "dom"],
     /* Unix style end of line */
     "newLine": "LF",
 
@@ -37,7 +37,7 @@
     /* Do not generate code on error */
     "noEmitOnError": true,
     /* Redirect output structure to the directory. */
-    "outDir": "./bin",
+    "outDir": "./dist",
     /* Redirect output structure to the directory. */
     "removeComments": true,
 
